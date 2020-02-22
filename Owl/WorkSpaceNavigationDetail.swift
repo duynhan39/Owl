@@ -15,22 +15,45 @@ struct WebBrowserView: NSViewRepresentable {
     let webView: WKWebView = WKWebView()
 
     func makeNSView(context: NSViewRepresentableContext<WebBrowserView>) -> WKWebView {
+//        webView.navigationDelegate = context.coordinator
+//        webView.uiDelegate = context.self
+        
+        guard let url = URL(string: "https://github.com/filimo/ReaderTranslator") else {
+            print("FAILED TO LOAD PAGE")
+            return webView
+            
+        }
+        
+//        let request = URLRequest(url: URL(string: "https://www.google.com/")!)
+        webView.load(URLRequest(url: url))
+        
         return webView
     }
     
     func updateNSView(_ nsView: WKWebView, context: NSViewRepresentableContext<WebBrowserView>) {
-        let request = URLRequest(url: URL(string: "https://google.com")!)
-        nsView.load(request)
+//        let request = URLRequest(url: URL(string: "https://www.google.com/")!)
+//        nsVie/w.load(request)
     }
 
 }
 
 struct WorkSpaceNavigationDetail: View {
-    var space: WorkSpace
+//    var space: WorkSpace
     
     var body: some View {
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        WebBrowserView()
+        VStack {
+//            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            GeometryReader { g in
+                ScrollView {
+                    WebBrowserView().tabItem {
+                        Text("Browser")
+                    }
+                    .frame(height: g.size.height)
+                    .tag(1)
+
+                }.frame(height: g.size.height)
+            }
+        }
         
         
         
@@ -42,6 +65,6 @@ struct WorkSpaceNavigationDetail: View {
 
 struct SpaceView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceNavigationDetail(space: workSpaceData[0])
+        WorkSpaceNavigationDetail() //(space: workSpaceData[0])
     }
 }
