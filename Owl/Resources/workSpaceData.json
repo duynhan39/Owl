@@ -2,11 +2,26 @@
 	{
         "id": 1,
 		"title": "Work",
-        "description": "Work stuff"
+        "description": "Work stuff",
+        "apps" : [
+            {
+                "name": "gmail",
+                "url": "https://gmail.com",
+                "id": 1
+            },
+            {
+                "name": "outlook",
+                "url": "https://outlook.com",
+                "id": 2
+            }
+        ]
+            
+        
 	},
 	{
         "id": 2,
 		"title": "Personal",
-        "description": "My stuff"
+        "description": "My stuff",
+        "apps" :[]
 	}
 ]

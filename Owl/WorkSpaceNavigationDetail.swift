@@ -9,40 +9,43 @@
 import SwiftUI
 import WebKit
 
+struct AppListing: View {
+    var selectedApp: App?
+    var apps: [App]
+    var body: some View {
+        VStack {
+            ForEach(apps) { app in
+                AppIconSideBar(app: app, isSelected: self.selectedApp == app)
+            }
+        }
+    }
+}
 
 struct WebBrowserView: NSViewRepresentable {
     typealias NSViewType = WKWebView
     let webView: WKWebView = WKWebView()
 
     func makeNSView(context: NSViewRepresentableContext<WebBrowserView>) -> WKWebView {
-//        webView.navigationDelegate = context.coordinator
-//        webView.uiDelegate = context.self
-        
-        guard let url = URL(string: "https://github.com/filimo/ReaderTranslator") else {
+        guard let url = URL(string: "https://gmail.com") else {
             print("FAILED TO LOAD PAGE")
             return webView
-            
         }
-        
-//        let request = URLRequest(url: URL(string: "https://www.google.com/")!)
         webView.load(URLRequest(url: url))
-        
         return webView
     }
     
-    func updateNSView(_ nsView: WKWebView, context: NSViewRepresentableContext<WebBrowserView>) {
-//        let request = URLRequest(url: URL(string: "https://www.google.com/")!)
-//        nsVie/w.load(request)
-    }
-
+    func updateNSView(_ nsView: WKWebView, context: NSViewRepresentableContext<WebBrowserView>) {}
 }
 
+
 struct WorkSpaceNavigationDetail: View {
-//    var space: WorkSpace
+    var space: WorkSpace
     
     var body: some View {
-        VStack {
-//            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .top, spacing: 0) {
+            
+            AppListing(selectedApp: space.apps[0],  apps: space.apps)
+            
             GeometryReader { g in
                 ScrollView {
                     WebBrowserView().tabItem {
@@ -54,17 +57,12 @@ struct WorkSpaceNavigationDetail: View {
                 }.frame(height: g.size.height)
             }
         }
-        
-        
-        
     }
-    
-    
 }
 
 
-struct SpaceView_Previews: PreviewProvider {
+struct WorkSpaceNavigationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceNavigationDetail() //(space: workSpaceData[0])
+        WorkSpaceNavigationDetail(space: workSpaceData[0])
     }
 }

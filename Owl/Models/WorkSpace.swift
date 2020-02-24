@@ -14,6 +14,5 @@ struct WorkSpace: Hashable, Codable, Identifiable {
     var title: String
     var description: String
     
-    
-
+    var apps: [App]
 }

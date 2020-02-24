@@ -21,6 +21,13 @@
 		54BAEB0B2401D289001BDA65 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB0A2401D289001BDA65 /* UserData.swift */; };
 		54BAEB0F2401E0FC001BDA65 /* WorkSpaceNavigationMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB0E2401E0FC001BDA65 /* WorkSpaceNavigationMaster.swift */; };
 		54BAEB112401E56E001BDA65 /* WorkSpaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB102401E56E001BDA65 /* WorkSpaceList.swift */; };
+		54BAEB132401FD33001BDA65 /* AppListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB122401FD33001BDA65 /* AppListing.swift */; };
+		54BAEB1724021FF5001BDA65 /* gmailSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEB1524021FF5001BDA65 /* gmailSelected.png */; };
+		54BAEB1824021FF5001BDA65 /* outlook.png in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEB1624021FF5001BDA65 /* outlook.png */; };
+		54BAEB1A24022682001BDA65 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB1924022682001BDA65 /* App.swift */; };
+		54BAEB1C24022D5C001BDA65 /* AppIconSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB1B24022D5C001BDA65 /* AppIconSideBar.swift */; };
+		54BAEB1F240345AD001BDA65 /* gmail.png in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEB1D240345AD001BDA65 /* gmail.png */; };
+		54BAEB20240345AD001BDA65 /* outlookSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEB1E240345AD001BDA65 /* outlookSelected.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +48,13 @@
 		54BAEB0A2401D289001BDA65 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		54BAEB0E2401E0FC001BDA65 /* WorkSpaceNavigationMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceNavigationMaster.swift; sourceTree = "<group>"; };
 		54BAEB102401E56E001BDA65 /* WorkSpaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceList.swift; sourceTree = "<group>"; };
+		54BAEB122401FD33001BDA65 /* AppListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListing.swift; sourceTree = "<group>"; };
+		54BAEB1524021FF5001BDA65 /* gmailSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gmailSelected.png; sourceTree = "<group>"; };
+		54BAEB1624021FF5001BDA65 /* outlook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outlook.png; sourceTree = "<group>"; };
+		54BAEB1924022682001BDA65 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		54BAEB1B24022D5C001BDA65 /* AppIconSideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconSideBar.swift; sourceTree = "<group>"; };
+		54BAEB1D240345AD001BDA65 /* gmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gmail.png; sourceTree = "<group>"; };
+		54BAEB1E240345AD001BDA65 /* outlookSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outlookSelected.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,8 @@
 				54BAEAE824019A1E001BDA65 /* ContentView.swift */,
 				54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */,
 				54BAEB102401E56E001BDA65 /* WorkSpaceList.swift */,
+				54BAEB1B24022D5C001BDA65 /* AppIconSideBar.swift */,
+				54BAEB122401FD33001BDA65 /* AppListing.swift */,
 				54BAEB0E2401E0FC001BDA65 /* WorkSpaceNavigationMaster.swift */,
 				54BAEAFC24019DD3001BDA65 /* WorkSpaceNavigationDetail.swift */,
 				54BAEAED24019A20001BDA65 /* Assets.xcassets */,
@@ -102,6 +118,7 @@
 		54BAEB002401C10C001BDA65 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				54BAEB1424021F7B001BDA65 /* App Icons */,
 				54BAEB012401C1B2001BDA65 /* workSpaceData.json */,
 			);
 			path = Resources;
@@ -110,11 +127,23 @@
 		54BAEB032401C226001BDA65 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				54BAEB1924022682001BDA65 /* App.swift */,
 				54BAEB042401C23B001BDA65 /* WorkSpace.swift */,
 				54BAEB062401C9C1001BDA65 /* Data.swift */,
 				54BAEB0A2401D289001BDA65 /* UserData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		54BAEB1424021F7B001BDA65 /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				54BAEB1D240345AD001BDA65 /* gmail.png */,
+				54BAEB1524021FF5001BDA65 /* gmailSelected.png */,
+				54BAEB1624021FF5001BDA65 /* outlook.png */,
+				54BAEB1E240345AD001BDA65 /* outlookSelected.png */,
+			);
+			path = "App Icons";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +205,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				54BAEB022401C1B2001BDA65 /* workSpaceData.json in Resources */,
+				54BAEB1724021FF5001BDA65 /* gmailSelected.png in Resources */,
 				54BAEAF424019A20001BDA65 /* Main.storyboard in Resources */,
+				54BAEB1824021FF5001BDA65 /* outlook.png in Resources */,
+				54BAEB20240345AD001BDA65 /* outlookSelected.png in Resources */,
 				54BAEAF124019A20001BDA65 /* Preview Assets.xcassets in Resources */,
+				54BAEB1F240345AD001BDA65 /* gmail.png in Resources */,
 				54BAEAEE24019A20001BDA65 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +230,9 @@
 				54BAEAFF2401C003001BDA65 /* WorkSpaceRow.swift in Sources */,
 				54BAEB052401C23B001BDA65 /* WorkSpace.swift in Sources */,
 				54BAEAFD24019DD3001BDA65 /* WorkSpaceNavigationDetail.swift in Sources */,
+				54BAEB132401FD33001BDA65 /* AppListing.swift in Sources */,
+				54BAEB1C24022D5C001BDA65 /* AppIconSideBar.swift in Sources */,
+				54BAEB1A24022682001BDA65 /* App.swift in Sources */,
 				54BAEAE924019A1E001BDA65 /* ContentView.swift in Sources */,
 				54BAEAE724019A1E001BDA65 /* AppDelegate.swift in Sources */,
 			);

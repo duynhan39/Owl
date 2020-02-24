@@ -20,24 +20,10 @@ struct WorkSpaceRow: View {
                     .frame(minWidth: 20)
                     
                 Text(space.description)
-    //                .multilineTextAlignment(.leading)
                     .font(.caption)
                     .opacity(0.625)
                     .truncationMode(.middle)
                     .frame(minWidth: 20)
-                
-
-    //            VStack(alignment: .leading) {
-    //                Text(landmark.name)
-    //                    .fontWeight(.bold)
-    //                    .truncationMode(.tail)
-    //                    .frame(minWidth: 20)
-    //
-    //                Text(landmark.park)
-    //                    .font(.caption)
-    //                    .opacity(0.625)
-    //                    .truncationMode(.middle)
-    //            }
             }
             
             Spacer()
