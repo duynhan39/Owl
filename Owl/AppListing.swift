@@ -8,20 +8,22 @@
 
 import SwiftUI
 
-//struct AppListing: View {
-//
-//    var apps: [App]
-//    var body: some View {
-//        VStack {
-//            ForEach(apps) { app in
-//                AppIconSideBar(app: app)
-//            }
-//        }
-//    }
-//}
+struct AppListing: View {
+    var apps: [App]
+    var selectedApp: App?
+    
+    var body: some View {
+        VStack {
+//            Text("Hi")
+            ForEach(apps) { app in
+                AppIconSideBar(app: app, isSelected: self.selectedApp == app)
+            }
+        }
+    }
+}
 
-//struct AppListing_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AppListing(apps: workSpaceData[0].apps)
-//    }
-//}
+struct AppListing_Previews: PreviewProvider {
+    static var previews: some View {
+        AppListing(apps: workSpaceData[0].apps, selectedApp: workSpaceData[0].apps[0])
+    }
+}

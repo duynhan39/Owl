@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541F10052403940600E1088D /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541F10042403940600E1088D /* BrowserView.swift */; };
 		54BAEAE724019A1E001BDA65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAE624019A1E001BDA65 /* AppDelegate.swift */; };
 		54BAEAE924019A1E001BDA65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAE824019A1E001BDA65 /* ContentView.swift */; };
 		54BAEAEC24019A1E001BDA65 /* Owl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAEA24019A1E001BDA65 /* Owl.xcdatamodeld */; };
 		54BAEAEE24019A20001BDA65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEAED24019A20001BDA65 /* Assets.xcassets */; };
 		54BAEAF124019A20001BDA65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEAF024019A20001BDA65 /* Preview Assets.xcassets */; };
 		54BAEAF424019A20001BDA65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEAF224019A20001BDA65 /* Main.storyboard */; };
-		54BAEAFD24019DD3001BDA65 /* WorkSpaceNavigationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAFC24019DD3001BDA65 /* WorkSpaceNavigationDetail.swift */; };
+		54BAEAFD24019DD3001BDA65 /* WorkSpaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAFC24019DD3001BDA65 /* WorkSpaceDetail.swift */; };
 		54BAEAFF2401C003001BDA65 /* WorkSpaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */; };
 		54BAEB022401C1B2001BDA65 /* workSpaceData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEB012401C1B2001BDA65 /* workSpaceData.json */; };
 		54BAEB052401C23B001BDA65 /* WorkSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB042401C23B001BDA65 /* WorkSpace.swift */; };
 		54BAEB072401C9C1001BDA65 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB062401C9C1001BDA65 /* Data.swift */; };
 		54BAEB0B2401D289001BDA65 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB0A2401D289001BDA65 /* UserData.swift */; };
-		54BAEB0F2401E0FC001BDA65 /* WorkSpaceNavigationMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB0E2401E0FC001BDA65 /* WorkSpaceNavigationMaster.swift */; };
-		54BAEB112401E56E001BDA65 /* WorkSpaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB102401E56E001BDA65 /* WorkSpaceList.swift */; };
+		54BAEB0F2401E0FC001BDA65 /* WorkSpaceMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB0E2401E0FC001BDA65 /* WorkSpaceMaster.swift */; };
+		54BAEB112401E56E001BDA65 /* WorkSpaceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB102401E56E001BDA65 /* WorkSpaceListing.swift */; };
 		54BAEB132401FD33001BDA65 /* AppListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB122401FD33001BDA65 /* AppListing.swift */; };
 		54BAEB1724021FF5001BDA65 /* gmailSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEB1524021FF5001BDA65 /* gmailSelected.png */; };
 		54BAEB1824021FF5001BDA65 /* outlook.png in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEB1624021FF5001BDA65 /* outlook.png */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		541F10042403940600E1088D /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
 		54BAEAE324019A1E001BDA65 /* Owl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Owl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BAEAE624019A1E001BDA65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54BAEAE824019A1E001BDA65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,14 +42,14 @@
 		54BAEAF324019A20001BDA65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54BAEAF524019A20001BDA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54BAEAF624019A20001BDA65 /* Owl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Owl.entitlements; sourceTree = "<group>"; };
-		54BAEAFC24019DD3001BDA65 /* WorkSpaceNavigationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceNavigationDetail.swift; sourceTree = "<group>"; };
+		54BAEAFC24019DD3001BDA65 /* WorkSpaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceDetail.swift; sourceTree = "<group>"; };
 		54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceRow.swift; sourceTree = "<group>"; };
 		54BAEB012401C1B2001BDA65 /* workSpaceData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = workSpaceData.json; sourceTree = "<group>"; };
 		54BAEB042401C23B001BDA65 /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpace.swift; sourceTree = "<group>"; };
 		54BAEB062401C9C1001BDA65 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		54BAEB0A2401D289001BDA65 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		54BAEB0E2401E0FC001BDA65 /* WorkSpaceNavigationMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceNavigationMaster.swift; sourceTree = "<group>"; };
-		54BAEB102401E56E001BDA65 /* WorkSpaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceList.swift; sourceTree = "<group>"; };
+		54BAEB0E2401E0FC001BDA65 /* WorkSpaceMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceMaster.swift; sourceTree = "<group>"; };
+		54BAEB102401E56E001BDA65 /* WorkSpaceListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceListing.swift; sourceTree = "<group>"; };
 		54BAEB122401FD33001BDA65 /* AppListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListing.swift; sourceTree = "<group>"; };
 		54BAEB1524021FF5001BDA65 /* gmailSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gmailSelected.png; sourceTree = "<group>"; };
 		54BAEB1624021FF5001BDA65 /* outlook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outlook.png; sourceTree = "<group>"; };
@@ -90,11 +92,12 @@
 				54BAEAE624019A1E001BDA65 /* AppDelegate.swift */,
 				54BAEAE824019A1E001BDA65 /* ContentView.swift */,
 				54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */,
-				54BAEB102401E56E001BDA65 /* WorkSpaceList.swift */,
+				54BAEB102401E56E001BDA65 /* WorkSpaceListing.swift */,
 				54BAEB1B24022D5C001BDA65 /* AppIconSideBar.swift */,
 				54BAEB122401FD33001BDA65 /* AppListing.swift */,
-				54BAEB0E2401E0FC001BDA65 /* WorkSpaceNavigationMaster.swift */,
-				54BAEAFC24019DD3001BDA65 /* WorkSpaceNavigationDetail.swift */,
+				541F10042403940600E1088D /* BrowserView.swift */,
+				54BAEB0E2401E0FC001BDA65 /* WorkSpaceMaster.swift */,
+				54BAEAFC24019DD3001BDA65 /* WorkSpaceDetail.swift */,
 				54BAEAED24019A20001BDA65 /* Assets.xcassets */,
 				54BAEB032401C226001BDA65 /* Models */,
 				54BAEB002401C10C001BDA65 /* Resources */,
@@ -223,14 +226,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				54BAEB072401C9C1001BDA65 /* Data.swift in Sources */,
-				54BAEB112401E56E001BDA65 /* WorkSpaceList.swift in Sources */,
+				54BAEB112401E56E001BDA65 /* WorkSpaceListing.swift in Sources */,
 				54BAEAEC24019A1E001BDA65 /* Owl.xcdatamodeld in Sources */,
 				54BAEB0B2401D289001BDA65 /* UserData.swift in Sources */,
-				54BAEB0F2401E0FC001BDA65 /* WorkSpaceNavigationMaster.swift in Sources */,
+				54BAEB0F2401E0FC001BDA65 /* WorkSpaceMaster.swift in Sources */,
 				54BAEAFF2401C003001BDA65 /* WorkSpaceRow.swift in Sources */,
 				54BAEB052401C23B001BDA65 /* WorkSpace.swift in Sources */,
-				54BAEAFD24019DD3001BDA65 /* WorkSpaceNavigationDetail.swift in Sources */,
+				54BAEAFD24019DD3001BDA65 /* WorkSpaceDetail.swift in Sources */,
 				54BAEB132401FD33001BDA65 /* AppListing.swift in Sources */,
+				541F10052403940600E1088D /* BrowserView.swift in Sources */,
 				54BAEB1C24022D5C001BDA65 /* AppIconSideBar.swift in Sources */,
 				54BAEB1A24022682001BDA65 /* App.swift in Sources */,
 				54BAEAE924019A1E001BDA65 /* ContentView.swift in Sources */,

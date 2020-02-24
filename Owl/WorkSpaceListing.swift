@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct WorkSpaceList: View {
+struct WorkSpaceListing: View {
     @EnvironmentObject private var userData: UserData
     
     var body: some View {
@@ -24,7 +24,7 @@ struct WorkSpaceList: View {
 
 struct SpaceListView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceList()
+        WorkSpaceListing()
             .environmentObject(UserData())
     }
 }
