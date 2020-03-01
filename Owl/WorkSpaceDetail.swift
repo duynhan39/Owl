@@ -33,6 +33,6 @@ struct WorkSpaceDetail: View {
 
 struct WorkSpaceNavigationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceDetail(space: workSpaceData[0], selectedApp: workSpaceData[0].apps[0])
+        WorkSpaceDetail(space: workSpaceData[1], selectedApp: workSpaceData[1].apps[0])
     }
 }
