@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = WorkSpaceDetail(space: workSpaceData[0], selectedApp: workSpaceData[0].apps[1])
+        let contentView = WorkSpaceView(space: workSpaceData[1], selectedApp: workSpaceData[1].apps[1])
             .environment(\.managedObjectContext, persistentContainer.viewContext)
 
         // Create the window and set the content view. 

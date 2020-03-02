@@ -16,7 +16,6 @@ struct Browser: NSViewRepresentable {
 
     func makeNSView(context: NSViewRepresentableContext<Browser>) -> WKWebView {
         guard let urlString : String = app?.url else { return webView }
-        
         guard let url = URL(string: urlString) else {
             print("FAILED TO LOAD \(urlString)")
             return webView
@@ -25,7 +24,14 @@ struct Browser: NSViewRepresentable {
         return webView
     }
 
-    func updateNSView(_ nsView: WKWebView, context: NSViewRepresentableContext<Browser>) {}
+    func updateNSView(_ nsView: WKWebView, context: NSViewRepresentableContext<Browser>) {
+        guard let urlString : String = app?.url else { return }
+        guard let url = URL(string: urlString) else {
+            print("FAILED TO LOAD \(urlString)")
+            return
+        }
+        webView.load(URLRequest(url: url))
+    }
 }
 
 struct BrowserView: View {

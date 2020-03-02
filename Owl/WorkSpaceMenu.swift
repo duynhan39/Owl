@@ -8,21 +8,22 @@
 
 import SwiftUI
 
-struct WorkSpaceMaster: View {
+struct WorkSpaceMenu: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(" Spaces")
                 .multilineTextAlignment(.leading)
-                .font(.custom("Times New Roman", size: 30))
+                .font(.custom("Times New Roman", size: 40))
+                
                 
             WorkSpaceListing()//.listStyle(SidebarListStyle())
         }
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct WorkSpaceMenu_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceMaster()
+        WorkSpaceMenu()
         .environmentObject(UserData())
     }
 }
