@@ -10,14 +10,16 @@ import SwiftUI
 
 struct WorkSpaceMenu: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(" Spaces")
+        VStack(alignment: .leading, spacing: 5) {
+            
+            Text("Spaces")
                 .multilineTextAlignment(.leading)
                 .font(.custom("Times New Roman", size: 40))
-                
+                .foregroundColor(Color.black)
+                .padding()
                 
             WorkSpaceListing()//.listStyle(SidebarListStyle())
-        }
+        }.background(Color.yellow)
     }
 }
 

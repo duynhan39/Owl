@@ -31,6 +31,8 @@ struct Browser: NSViewRepresentable {
             return
         }
         webView.load(URLRequest(url: url))
+//        webView.reload()
+        
     }
 }
 
