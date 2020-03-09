@@ -24,13 +24,7 @@ struct Browser: NSViewRepresentable {
         return webView
     }
 
-    func updateNSView(_ nsView: WKWebView, context: NSViewRepresentableContext<Browser>) {
-        guard let urlString : String = app?.url else { return }
-        guard let url = URL(string: urlString) else {
-            print("FAILED TO LOAD \(urlString)")
-            return
-        }
-        webView.load(URLRequest(url: url))
+    func updateNSView(_ nsView: WKWebView, context: NSViewRepresentableContext<Browser>) {        
     }
 }
 
@@ -46,12 +40,13 @@ struct BrowserView: View {
                 .tag(1)
 
             }.frame(height: g.size.height)
+//            .frame(width: .infinity, height: .infinity)
         }
     }
 }
 
 struct BrowserView_Previews: PreviewProvider {
     static var previews: some View {
-        BrowserView(app: workSpaceData[0].apps[0])
+        BrowserView(app: workSpaceData[0].apps[1])
     }
 }

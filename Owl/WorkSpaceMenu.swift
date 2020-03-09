@@ -10,7 +10,7 @@ import SwiftUI
 
 struct WorkSpaceMenu: View {
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 6  ) {
             Text(" Spaces")
                 .multilineTextAlignment(.leading)
                 .font(.custom("Times New Roman", size: 40))
