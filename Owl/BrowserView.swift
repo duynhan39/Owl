@@ -31,15 +31,15 @@ struct Browser: NSViewRepresentable {
 struct BrowserView: View {
     var app: App?
     var body: some View {
-        GeometryReader { g in
+        GeometryReader { geometry in
             ScrollView {
                 Browser(app: self.app) .tabItem {
                     Text("Browser")
                 }
-                .frame(height: g.size.height)
+                .frame(height: geometry.size.height)
                 .tag(1)
 
-            }.frame(height: g.size.height)
+            }.frame(height: geometry.size.height)
 //            .frame(width: .infinity, height: .infinity)
         }.background(Color.blue)
     }

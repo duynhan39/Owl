@@ -12,22 +12,10 @@ import SwiftUI
 struct WorkSpaceView: View {
     @Binding var workSpace: WorkSpace?
     @State var selectedApp : App?
-    var browserTabs : [App?:BrowserView]
-    
+    var browserTabs : [App:BrowserView]
     var seenSoFar : [App]
     var appStack : [App]
     {
-        //        var stack = [App]()
-        //        if selectedApp != nil {
-        //            stack = [selectedApp!]
-        //        }
-        //
-        //        for app in space.apps {
-        //            if app != selectedApp {
-        //                stack += [app]
-        //            }
-        //        }
-        
         var stack : [App] = workSpace?.apps ?? []
         if selectedApp != nil {
             stack.swapAt(stack.firstIndex(of: selectedApp!) ?? 0, stack.count-1)
@@ -37,61 +25,59 @@ struct WorkSpaceView: View {
         
     }
     
-    init(workSpace: WorkSpace?) {
-        self.workSpace = workSpace
-        self.selectedApp = nil
-        self.browserTabs = [App?:BrowserView]()
-        self.seenSoFar = [App]()
+    init(workSpace: Binding<WorkSpace?>, selectedApp: App?) {
+        self.browserTabs = [App:BrowserView]()
+        self.seenSoFar = []
+        self._workSpace = workSpace
+        self.selectedApp = selectedApp
         
-        for app in workSpace?.apps ?? [] {
+        for app in self.workSpace?.apps ?? [] {
             browserTabs[app] = BrowserView(app: app)
         }
     }
     
     func goBack() {
-        print("Go back")
+        withAnimation(.linear) {
+            workSpace = nil
+            selectedApp = nil
+        }
     }
     
     var body: some View {
         HStack(spacing: 0) {
+            VStack {
+                Button(action: goBack) {
+                    Image(nsImage: NSImage(named: NSImage.goBackTemplateName)!)
+                }
+                
+                
+                AppListing(apps: workSpace?.apps, selectedApp: $selectedApp)
+                
+                Button(action: goBack) {
+                    Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
+                }
+            }
+            .padding(5)
+            .background(Color.init(red: 0.89, green: 0.74, blue: 0.46))
             
-//            if (space != nil) {
-                
-                VStack {
-                    Button(action: goBack) {
-                        Image(nsImage: NSImage(named: NSImage.goBackTemplateName)!)
-                    }
-                    
-                    
-                    AppListing(apps: workSpace?.apps, selectedApp: $selectedApp)
-                    
-                    Button(action: goBack) {
-                        Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
-                    }
+            ZStack {
+                ForEach(appStack) { app in
+                    self.browserTabs[app]
                 }
-                .padding(5)
-                .background(Color.init(red: 0.89, green: 0.74, blue: 0.46))
                 
-                ZStack {
-                    ForEach(appStack) { app in
-                        self.browserTabs[app]
-                    }
-                    
-                    if selectedApp == nil {
-                        Color.yellow
-                    }
-                    
+                if selectedApp == nil {
+                    Color.yellow
                 }
-//            }
+                
+            }
         }
-        //.frame(minWidth: .infinity, minHeight: .infinity)
     }
 }
 
 
 struct WorkSpaceNavigationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceView(workSpace: nil)
-//        WorkSpaceView(space: nil, selectedApp: nil)
+        WorkSpaceView(workSpace: .constant(workSpaceData[1]) , selectedApp: nil)
     }
 }
+

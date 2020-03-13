@@ -22,10 +22,12 @@ struct WorkSpaceMenu: View {
                 WorkSpaceListing(presentedSpace: $presentedSpace) //.listStyle(SidebarListStyle())
             }
             
-            ZStack() {
-                WorkSpaceView(workSpace: presentedSpace)
+            GeometryReader { geometry in
+                ZStack() {
+                    WorkSpaceView(workSpace: self.$presentedSpace, selectedApp: nil)
+                }
+                .offset(x: self.presentedSpace != nil ? 0 : geometry.size.width , y: 0)
             }
-            .offset(x: self.presentedSpace != nil ? 0 : 500 , y: 0)
         }
     }
 }
@@ -41,7 +43,7 @@ struct WorkSpaceListing: View {
                 Button(action: {
                     withAnimation() {
                         self.presentedSpace = space
-                        print(self.presentedSpace)
+//                        print(self.presentedSpace)
                     }
                 }) {
                     WorkSpaceRow(space: space)
