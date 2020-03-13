@@ -10,23 +10,25 @@ import SwiftUI
 //import WebKit
 
 struct WorkSpaceView: View {
-    var space: WorkSpace
+    @Binding var workSpace: WorkSpace?
     @State var selectedApp : App?
-    var browserTabs = [App?:BrowserView]()
+    var browserTabs : [App?:BrowserView]
     
-    var appStack: [App] {
-//        var stack = [App]()
-//        if selectedApp != nil {
-//            stack = [selectedApp!]
-//        }
-//
-//        for app in space.apps {
-//            if app != selectedApp {
-//                stack += [app]
-//            }
-//        }
+    var seenSoFar : [App]
+    var appStack : [App]
+    {
+        //        var stack = [App]()
+        //        if selectedApp != nil {
+        //            stack = [selectedApp!]
+        //        }
+        //
+        //        for app in space.apps {
+        //            if app != selectedApp {
+        //                stack += [app]
+        //            }
+        //        }
         
-        var stack = space.apps
+        var stack : [App] = workSpace?.apps ?? []
         if selectedApp != nil {
             stack.swapAt(stack.firstIndex(of: selectedApp!) ?? 0, stack.count-1)
         }
@@ -35,34 +37,51 @@ struct WorkSpaceView: View {
         
     }
     
-    init(space: WorkSpace, selectedApp: App?) {
-        self.space = space
-        self.selectedApp = selectedApp
-        for app in space.apps {
+    init(workSpace: WorkSpace?) {
+        self.workSpace = workSpace
+        self.selectedApp = nil
+        self.browserTabs = [App?:BrowserView]()
+        self.seenSoFar = [App]()
+        
+        for app in workSpace?.apps ?? [] {
             browserTabs[app] = BrowserView(app: app)
         }
     }
     
+    func goBack() {
+        print("Go back")
+    }
+    
     var body: some View {
-        NavigationView {
+        HStack(spacing: 0) {
             
-            AppListing(apps: space.apps, selectedApp: $selectedApp)
-            
-//            if selectedApp != space.apps[1] {
-//                BrowserView(app: selectedApp!)
-//                Text("\(selectedApp?.name ?? "None")")
-            ZStack {
-//                ForEach(browserTabs) { tab in
-//                    tab
-//                }
-            
-                ForEach(appStack) { app in
-                    self.browserTabs[app]
+//            if (space != nil) {
+                
+                VStack {
+                    Button(action: goBack) {
+                        Image(nsImage: NSImage(named: NSImage.goBackTemplateName)!)
+                    }
+                    
+                    
+                    AppListing(apps: workSpace?.apps, selectedApp: $selectedApp)
+                    
+                    Button(action: goBack) {
+                        Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
+                    }
                 }
-//                browserTabs[selectedApp]
-            }
-//            } else {
-//                Spacer()
+                .padding(5)
+                .background(Color.init(red: 0.89, green: 0.74, blue: 0.46))
+                
+                ZStack {
+                    ForEach(appStack) { app in
+                        self.browserTabs[app]
+                    }
+                    
+                    if selectedApp == nil {
+                        Color.yellow
+                    }
+                    
+                }
 //            }
         }
         //.frame(minWidth: .infinity, minHeight: .infinity)
@@ -72,6 +91,7 @@ struct WorkSpaceView: View {
 
 struct WorkSpaceNavigationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceView(space: workSpaceData[1], selectedApp: nil)
+        WorkSpaceView(workSpace: nil)
+//        WorkSpaceView(space: nil, selectedApp: nil)
     }
 }

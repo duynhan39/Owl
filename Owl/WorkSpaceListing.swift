@@ -8,23 +8,23 @@
 
 import SwiftUI
 
-struct WorkSpaceListing: View {
-    @EnvironmentObject private var userData: UserData
-    
-    var body: some View {
-        List {
-            ForEach(userData.spaces) { space in
-                WorkSpaceRow(space: space)
-            }
-        }
-//        .navigationBarTitle("Spaces")
-        
-    }
-}
-
-struct SpaceListView_Previews: PreviewProvider {
-    static var previews: some View {
-        WorkSpaceListing()
-            .environmentObject(UserData())
-    }
-}
+//struct WorkSpaceListing: View {
+//    @EnvironmentObject private var userData: UserData
+//    
+//    var body: some View {
+//        List {
+//            ForEach(userData.spaces) { space in
+//                WorkSpaceRow(space: space)
+//            }
+//        }
+////        .navigationBarTitle("Spaces")
+//        
+//    }
+//}
+//
+//struct SpaceListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WorkSpaceListing()
+//            .environmentObject(UserData())
+//    }
+//}

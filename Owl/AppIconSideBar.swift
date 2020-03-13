@@ -40,10 +40,9 @@ struct AppIconSideBar: View {
             .frame(width: AppIconMeasures.iconEdge, height: AppIconMeasures.iconEdge)
             .fixedSize(horizontal: true, vertical: false)
             .padding(AppIconMeasures.innerPadding)
-//            .background(Color.gray)
+            .background(Color.white)
             .clipShape(Circle())
-            .overlay(
-                Circle().stroke(Color.white, lineWidth: AppIconMeasures.stokerWidth))
+            .overlay(Circle().stroke(Color.gray, lineWidth: AppIconMeasures.stokerWidth))
             .padding(AppIconMeasures.outterPadding)
         
 //        var view: Image

@@ -41,7 +41,7 @@ struct BrowserView: View {
 
             }.frame(height: g.size.height)
 //            .frame(width: .infinity, height: .infinity)
-        }
+        }.background(Color.blue)
     }
 }
 

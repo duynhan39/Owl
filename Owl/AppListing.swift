@@ -15,20 +15,24 @@ struct AppButtonStyle: ButtonStyle {
 }
 
 struct AppListing: View {
-    var apps: [App]
+    var apps: [App]?
     @Binding var selectedApp: App?
     
     var body: some View {
         
         VStack {
-//            Text("Hi")
-            ForEach(apps) { app in
+            //            Text("Hi")
+            ForEach(apps ?? []) { app in
                 Button(action: {
                     self.selectedApp = app
-                    print(app)
+//                    print(app)
                 })
                 {
-                AppIconSideBar(app: app, isSelected: self.selectedApp == app)
+//                    if app != self.selectedApp {
+                    AppIconSideBar(app: app, isSelected: self.selectedApp == app)
+//                    } else {
+//                        AppIconSideBar(app: app, isSelected: self.selectedApp == app).offset(x: 10, y: 0)
+//                    }
                     
                 }.buttonStyle(AppButtonStyle())
                 //.frame(minWidth: 50, idealWidth: 50, maxWidth: 100, minHeight: 50, idealHeight: 50, maxHeight: 100, alignment: <#T##Alignment#>)
