@@ -37,23 +37,28 @@ struct WorkSpaceView: View {
     }
     
     func goBack() {
-        withAnimation(.linear) {
+        withAnimation() {
+            
             workSpace = nil
             selectedApp = nil
         }
+    }
+    
+    func addApp() {
+        print("Add app")
     }
     
     var body: some View {
         HStack(spacing: 0) {
             VStack {
                 Button(action: goBack) {
-                    Image(nsImage: NSImage(named: NSImage.goBackTemplateName)!)
+                    Image(nsImage: NSImage(named: NSImage.touchBarGoDownTemplateName)!)
                 }
                 
                 
-                AppListing(apps: workSpace?.apps, selectedApp: $selectedApp)
+                WorkSpaceAppListing(apps: workSpace?.apps, selectedApp: $selectedApp)
                 
-                Button(action: goBack) {
+                Button(action: addApp) {
                     Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
                 }
             }
@@ -77,7 +82,7 @@ struct WorkSpaceView: View {
 
 struct WorkSpaceNavigationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceView(workSpace: .constant(workSpaceData[1]) , selectedApp: nil)
+        WorkSpaceView(workSpace: .constant(nil) , selectedApp: nil)
     }
 }
 

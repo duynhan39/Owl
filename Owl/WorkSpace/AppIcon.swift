@@ -21,7 +21,7 @@ struct AppIconMeasures {
     }
 }
 
-struct AppIconSideBar: View {
+struct AppIcon: View {
     var app: App
     var isSelected: Bool
     var body: some View {
@@ -58,6 +58,6 @@ struct AppIconSideBar: View {
 
 struct AppIconSideBar_Previews: PreviewProvider {
     static var previews: some View {
-        AppIconSideBar(app: workSpaceData[0].apps[0], isSelected: true)
+        AppIcon(app: workSpaceData[0].apps[0], isSelected: true)
     }
 }

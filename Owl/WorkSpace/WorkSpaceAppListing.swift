@@ -14,28 +14,20 @@ struct AppButtonStyle: ButtonStyle {
     }
 }
 
-struct AppListing: View {
+struct WorkSpaceAppListing: View {
     var apps: [App]?
     @Binding var selectedApp: App?
     
     var body: some View {
         
         VStack {
-            //            Text("Hi")
             ForEach(apps ?? []) { app in
                 Button(action: {
                     self.selectedApp = app
-//                    print(app)
                 })
                 {
-//                    if app != self.selectedApp {
-                    AppIconSideBar(app: app, isSelected: self.selectedApp == app)
-//                    } else {
-//                        AppIconSideBar(app: app, isSelected: self.selectedApp == app).offset(x: 10, y: 0)
-//                    }
-                    
+                    AppIcon(app: app, isSelected: self.selectedApp == app)
                 }.buttonStyle(AppButtonStyle())
-                //.frame(minWidth: 50, idealWidth: 50, maxWidth: 100, minHeight: 50, idealHeight: 50, maxHeight: 100, alignment: <#T##Alignment#>)
             }
             Spacer()
         }
@@ -44,6 +36,6 @@ struct AppListing: View {
 
 struct AppListing_Previews: PreviewProvider {
     static var previews: some View {
-        AppListing(apps: workSpaceData[0].apps, selectedApp: .constant(workSpaceData[0].apps[0]))
+        WorkSpaceAppListing(apps: workSpaceData[0].apps, selectedApp: .constant(workSpaceData[0].apps[0]))
     }
 }

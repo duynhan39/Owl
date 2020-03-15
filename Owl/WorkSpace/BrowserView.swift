@@ -33,15 +33,14 @@ struct BrowserView: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
-                Browser(app: self.app) .tabItem {
-                    Text("Browser")
-                }
+                Browser(app: self.app)
+//                    .tabItem {
+//                    Text("Browser")
+//                }
                 .frame(height: geometry.size.height)
                 .tag(1)
-
             }.frame(height: geometry.size.height)
-//            .frame(width: .infinity, height: .infinity)
-        }.background(Color.blue)
+        }
     }
 }
 

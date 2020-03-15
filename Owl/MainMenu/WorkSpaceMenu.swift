@@ -18,40 +18,16 @@ struct WorkSpaceMenu: View {
                     .multilineTextAlignment(.leading)
                     .font(.custom("Times New Roman", size: 40))
                 
-                
-                WorkSpaceListing(presentedSpace: $presentedSpace) //.listStyle(SidebarListStyle())
+                WorkSpaceListing(presentedSpace: $presentedSpace)
+                //.listStyle(SidebarListStyle())
             }
             
             GeometryReader { geometry in
                 ZStack() {
                     WorkSpaceView(workSpace: self.$presentedSpace, selectedApp: nil)
-                }
-                .offset(x: self.presentedSpace != nil ? 0 : geometry.size.width , y: 0)
+                }.offset(x: 0, y: self.presentedSpace != nil ? 0 : geometry.size.height)
             }
         }
-    }
-}
-
-struct WorkSpaceListing: View {
-    @EnvironmentObject private var userData: UserData
-    @Binding var presentedSpace : WorkSpace?
-    
-    var body: some View {
-        List {
-            ForEach(userData.spaces) { space in
-                
-                Button(action: {
-                    withAnimation() {
-                        self.presentedSpace = space
-//                        print(self.presentedSpace)
-                    }
-                }) {
-                    WorkSpaceRow(space: space)
-                }
-                .buttonStyle(AppButtonStyle())
-            }
-        }
-        
     }
 }
 
