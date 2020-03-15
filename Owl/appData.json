@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        "name": "gmail",
+        "officialName": "Gmail",
+        "url": "https://gmail.com",
+    },
+    {
+        "id":1,
+        "name": "outlook",
+        "officialName": "Outlook",
+        "url": "https://login.live.com/",
+    },
+    {
+        "id":1,
+        "name": "messenger",
+        "officialName": "Messenger",
+        "url": "https://messenger.com",
+    },
+    {
+        "id":1,
+        "name": "instagram",
+        "officialName": "Instagram",
+        "url": "https://instagram.com/",
+    },
+    {
+        "id":1,
+        "name": "whatsapp",
+        "officialName": "Whatsapp",
+        "url": "https://whatsapp.com/",
+    }
+]
+
+

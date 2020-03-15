@@ -38,7 +38,7 @@ struct WorkSpaceListing: View {
     
     var body: some View {
         List {
-            ForEach(userData.spaces) { space in
+            ForEach(userData.allSpaces) { space in
                 
                 Button(action: {
                     withAnimation() {

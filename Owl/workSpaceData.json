@@ -6,11 +6,13 @@
         "apps" : [
             {
                 "name": "gmail",
+                "officialName": "Gmail",
                 "url": "https://gmail.com",
                 "id": 1
             },
             {
                 "name": "outlook",
+                "officialName": "Outlook",
                 "url": "https://login.live.com/",
                 "id": 2
             }
@@ -25,16 +27,19 @@
         "apps" :[
             {
                 "name": "messenger",
+                "officialName": "Messenger",
                 "url": "https://messenger.com",
                 "id": 1
             },
             {
                 "name": "instagram",
+                "officialName": "Instagram",
                 "url": "https://instagram.com/",
                 "id": 2
             },
             {
                 "name": "whatsapp",
+                "officialName": "Whatsapp",
                 "url": "https://whatsapp.com/",
                 "id": 3
             }

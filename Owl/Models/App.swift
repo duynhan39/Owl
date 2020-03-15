@@ -12,6 +12,7 @@ import SwiftUI
 struct App: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
+    var officialName: String
     var url: String
 }
 

@@ -29,7 +29,7 @@ struct AppListing: View {
                 })
                 {
 //                    if app != self.selectedApp {
-                    AppIconSideBar(app: app, isSelected: self.selectedApp == app)
+                    AppIcon(app: app, isSelected: self.selectedApp == app)
 //                    } else {
 //                        AppIconSideBar(app: app, isSelected: self.selectedApp == app).offset(x: 10, y: 0)
 //                    }

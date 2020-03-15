@@ -11,6 +11,7 @@ import SwiftUI
 import ImageIO
 
 let workSpaceData: [WorkSpace] = load("workSpaceData.json")
+let appData: [App] = load("appData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

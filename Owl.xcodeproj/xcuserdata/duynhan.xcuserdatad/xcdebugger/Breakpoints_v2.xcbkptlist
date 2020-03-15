@@ -84,5 +84,117 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3246DBB0-1ED5-45DF-8985-F17A91E87C64"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Owl/AllAppListingView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F1BE452-6041-4E8B-938B-EC9049A491B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Owl/Models/Data.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "1F1BE452-6041-4E8B-938B-EC9049A491B7 - aff3d75611492736"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_36A90DDDE9178A431FB5417E3569852B_func0"
+                  moduleName = "Owl"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duynhan/Programming/UE/CS496/Owl/Owl/Models/Data.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "1F1BE452-6041-4E8B-938B-EC9049A491B7 - 8c6226d523caee5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Owl.workSpaceData.unsafeMutableAddressor : Swift.Array&lt;Owl.WorkSpace&gt;"
+                  moduleName = "Owl"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duynhan/Programming/UE/CS496/Owl/Owl/Models/Data.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0EA2CE4-535F-42E3-A7D1-050CE880BD7E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Owl/Models/Data.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "D0EA2CE4-535F-42E3-A7D1-050CE880BD7E - aff3d75611392737"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_36A90DDDE9178A431FB5417E3569852B_func1"
+                  moduleName = "Owl"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duynhan/Programming/UE/CS496/Owl/Owl/Models/Data.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "D0EA2CE4-535F-42E3-A7D1-050CE880BD7E - 6ab89f8407b8c6ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Owl.appData.unsafeMutableAddressor : Swift.Array&lt;Foundation.Data&gt;"
+                  moduleName = "Owl"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duynhan/Programming/UE/CS496/Owl/Owl/Models/Data.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

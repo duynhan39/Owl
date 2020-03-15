@@ -15,14 +15,30 @@
 		54BAEAF124019A20001BDA65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEAF024019A20001BDA65 /* Preview Assets.xcassets */; };
 		54BAEAF424019A20001BDA65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEAF224019A20001BDA65 /* Main.storyboard */; };
 		54BAEAFF2401C003001BDA65 /* WorkSpaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */; };
-		54BAEB022401C1B2001BDA65 /* workSpaceData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54BAEB012401C1B2001BDA65 /* workSpaceData.json */; };
 		54BAEB052401C23B001BDA65 /* WorkSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB042401C23B001BDA65 /* WorkSpace.swift */; };
 		54BAEB072401C9C1001BDA65 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB062401C9C1001BDA65 /* Data.swift */; };
 		54BAEB0B2401D289001BDA65 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB0A2401D289001BDA65 /* UserData.swift */; };
 		54BAEB112401E56E001BDA65 /* WorkSpaceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB102401E56E001BDA65 /* WorkSpaceListing.swift */; };
 		54BAEB132401FD33001BDA65 /* AppListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB122401FD33001BDA65 /* AppListing.swift */; };
 		54BAEB1A24022682001BDA65 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB1924022682001BDA65 /* App.swift */; };
-		54BAEB1C24022D5C001BDA65 /* AppIconSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB1B24022D5C001BDA65 /* AppIconSideBar.swift */; };
+		54BAEB1C24022D5C001BDA65 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEB1B24022D5C001BDA65 /* AppIcon.swift */; };
+		54C3DB26241DC04100D9B7FD /* appData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54C3DB24241DC04100D9B7FD /* appData.json */; };
+		54C3DB27241DC04100D9B7FD /* workSpaceData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54C3DB25241DC04100D9B7FD /* workSpaceData.json */; };
+		54C3DB3A241DC05400D9B7FD /* Grid+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB2A241DC05400D9B7FD /* Grid+Inits.swift */; };
+		54C3DB3B241DC05400D9B7FD /* GridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB2C241DC05400D9B7FD /* GridStyle.swift */; };
+		54C3DB3C241DC05400D9B7FD /* View+GridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB2D241DC05400D9B7FD /* View+GridStyle.swift */; };
+		54C3DB3D241DC05400D9B7FD /* GridStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB2E241DC05400D9B7FD /* GridStyleKey.swift */; };
+		54C3DB3E241DC05400D9B7FD /* GridPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB2F241DC05400D9B7FD /* GridPreferences.swift */; };
+		54C3DB3F241DC05400D9B7FD /* GridPreferencesModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB30241DC05400D9B7FD /* GridPreferencesModifier.swift */; };
+		54C3DB40241DC05400D9B7FD /* EnvironmentValues+GridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB31241DC05400D9B7FD /* EnvironmentValues+GridStyle.swift */; };
+		54C3DB41241DC05400D9B7FD /* GridItemBoundsPreferencesKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB32241DC05400D9B7FD /* GridItemBoundsPreferencesKey.swift */; };
+		54C3DB42241DC05400D9B7FD /* StaggeredGridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB34241DC05400D9B7FD /* StaggeredGridStyle.swift */; };
+		54C3DB43241DC05400D9B7FD /* ModularGridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB35241DC05400D9B7FD /* ModularGridStyle.swift */; };
+		54C3DB44241DC05400D9B7FD /* GridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB36241DC05400D9B7FD /* GridItem.swift */; };
+		54C3DB45241DC05400D9B7FD /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB37241DC05400D9B7FD /* Tracks.swift */; };
+		54C3DB46241DC05400D9B7FD /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB38241DC05400D9B7FD /* Grid.swift */; };
+		54C3DB47241DC05400D9B7FD /* LayoutMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB39241DC05400D9B7FD /* LayoutMath.swift */; };
+		54C3DB49241DC06200D9B7FD /* AllAppListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB48241DC06200D9B7FD /* AllAppListingView.swift */; };
 		54DDF9F32410247F00E77874 /* outlookSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9E82410247E00E77874 /* outlookSelected.png */; };
 		54DDF9F42410247F00E77874 /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9E92410247E00E77874 /* whatsapp.png */; };
 		54DDF9F52410247F00E77874 /* messenger.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9EA2410247E00E77874 /* messenger.png */; };
@@ -50,14 +66,30 @@
 		54BAEAF524019A20001BDA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54BAEAF624019A20001BDA65 /* Owl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Owl.entitlements; sourceTree = "<group>"; };
 		54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceRow.swift; sourceTree = "<group>"; };
-		54BAEB012401C1B2001BDA65 /* workSpaceData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = workSpaceData.json; sourceTree = "<group>"; };
 		54BAEB042401C23B001BDA65 /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpace.swift; sourceTree = "<group>"; };
 		54BAEB062401C9C1001BDA65 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		54BAEB0A2401D289001BDA65 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		54BAEB102401E56E001BDA65 /* WorkSpaceListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceListing.swift; sourceTree = "<group>"; };
 		54BAEB122401FD33001BDA65 /* AppListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListing.swift; sourceTree = "<group>"; };
 		54BAEB1924022682001BDA65 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		54BAEB1B24022D5C001BDA65 /* AppIconSideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconSideBar.swift; sourceTree = "<group>"; };
+		54BAEB1B24022D5C001BDA65 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		54C3DB24241DC04100D9B7FD /* appData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = appData.json; path = Owl/appData.json; sourceTree = SOURCE_ROOT; };
+		54C3DB25241DC04100D9B7FD /* workSpaceData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = workSpaceData.json; path = Owl/workSpaceData.json; sourceTree = SOURCE_ROOT; };
+		54C3DB2A241DC05400D9B7FD /* Grid+Inits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grid+Inits.swift"; sourceTree = "<group>"; };
+		54C3DB2C241DC05400D9B7FD /* GridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridStyle.swift; sourceTree = "<group>"; };
+		54C3DB2D241DC05400D9B7FD /* View+GridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+GridStyle.swift"; sourceTree = "<group>"; };
+		54C3DB2E241DC05400D9B7FD /* GridStyleKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridStyleKey.swift; sourceTree = "<group>"; };
+		54C3DB2F241DC05400D9B7FD /* GridPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPreferences.swift; sourceTree = "<group>"; };
+		54C3DB30241DC05400D9B7FD /* GridPreferencesModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPreferencesModifier.swift; sourceTree = "<group>"; };
+		54C3DB31241DC05400D9B7FD /* EnvironmentValues+GridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+GridStyle.swift"; sourceTree = "<group>"; };
+		54C3DB32241DC05400D9B7FD /* GridItemBoundsPreferencesKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridItemBoundsPreferencesKey.swift; sourceTree = "<group>"; };
+		54C3DB34241DC05400D9B7FD /* StaggeredGridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridStyle.swift; sourceTree = "<group>"; };
+		54C3DB35241DC05400D9B7FD /* ModularGridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridStyle.swift; sourceTree = "<group>"; };
+		54C3DB36241DC05400D9B7FD /* GridItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridItem.swift; sourceTree = "<group>"; };
+		54C3DB37241DC05400D9B7FD /* Tracks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
+		54C3DB38241DC05400D9B7FD /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		54C3DB39241DC05400D9B7FD /* LayoutMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutMath.swift; sourceTree = "<group>"; };
+		54C3DB48241DC06200D9B7FD /* AllAppListingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllAppListingView.swift; sourceTree = "<group>"; };
 		54DDF9E82410247E00E77874 /* outlookSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = outlookSelected.png; path = Owl/Resources/AppIcons/outlookSelected.png; sourceTree = SOURCE_ROOT; };
 		54DDF9E92410247E00E77874 /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whatsapp.png; path = Owl/Resources/AppIcons/whatsapp.png; sourceTree = SOURCE_ROOT; };
 		54DDF9EA2410247E00E77874 /* messenger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = messenger.png; path = Owl/Resources/AppIcons/messenger.png; sourceTree = SOURCE_ROOT; };
@@ -107,13 +139,15 @@
 				54BAEAE824019A1E001BDA65 /* ContentView.swift */,
 				54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */,
 				54BAEB102401E56E001BDA65 /* WorkSpaceListing.swift */,
-				54BAEB1B24022D5C001BDA65 /* AppIconSideBar.swift */,
+				54BAEB1B24022D5C001BDA65 /* AppIcon.swift */,
 				54DDF9FE2410248D00E77874 /* WorkSpaceMenu.swift */,
 				54BAEB122401FD33001BDA65 /* AppListing.swift */,
 				541F10042403940600E1088D /* BrowserView.swift */,
 				54DDFA002410249700E77874 /* WorkSpaceView.swift */,
+				54C3DB48241DC06200D9B7FD /* AllAppListingView.swift */,
 				54BAEAED24019A20001BDA65 /* Assets.xcassets */,
 				54BAEB032401C226001BDA65 /* Models */,
+				54C3DB28241DC05400D9B7FD /* Grid */,
 				54BAEB002401C10C001BDA65 /* Resources */,
 				54BAEAF224019A20001BDA65 /* Main.storyboard */,
 				54BAEAF524019A20001BDA65 /* Info.plist */,
@@ -135,8 +169,9 @@
 		54BAEB002401C10C001BDA65 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				54C3DB24241DC04100D9B7FD /* appData.json */,
+				54C3DB25241DC04100D9B7FD /* workSpaceData.json */,
 				54BAEB1424021F7B001BDA65 /* App Icons */,
-				54BAEB012401C1B2001BDA65 /* workSpaceData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -168,6 +203,51 @@
 				54DDF9EC2410247F00E77874 /* whatsappSelected.png */,
 			);
 			path = "App Icons";
+			sourceTree = "<group>";
+		};
+		54C3DB28241DC05400D9B7FD /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				54C3DB29241DC05400D9B7FD /* Layout */,
+				54C3DB2A241DC05400D9B7FD /* Grid+Inits.swift */,
+				54C3DB2B241DC05400D9B7FD /* Style */,
+				54C3DB33241DC05400D9B7FD /* Styles */,
+				54C3DB36241DC05400D9B7FD /* GridItem.swift */,
+				54C3DB37241DC05400D9B7FD /* Tracks.swift */,
+				54C3DB38241DC05400D9B7FD /* Grid.swift */,
+				54C3DB39241DC05400D9B7FD /* LayoutMath.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		54C3DB29241DC05400D9B7FD /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		54C3DB2B241DC05400D9B7FD /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				54C3DB2C241DC05400D9B7FD /* GridStyle.swift */,
+				54C3DB2D241DC05400D9B7FD /* View+GridStyle.swift */,
+				54C3DB2E241DC05400D9B7FD /* GridStyleKey.swift */,
+				54C3DB2F241DC05400D9B7FD /* GridPreferences.swift */,
+				54C3DB30241DC05400D9B7FD /* GridPreferencesModifier.swift */,
+				54C3DB31241DC05400D9B7FD /* EnvironmentValues+GridStyle.swift */,
+				54C3DB32241DC05400D9B7FD /* GridItemBoundsPreferencesKey.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		54C3DB33241DC05400D9B7FD /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				54C3DB34241DC05400D9B7FD /* StaggeredGridStyle.swift */,
+				54C3DB35241DC05400D9B7FD /* ModularGridStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +310,8 @@
 			files = (
 				54DDF9F52410247F00E77874 /* messenger.png in Resources */,
 				54DDF9F72410247F00E77874 /* whatsappSelected.png in Resources */,
-				54BAEB022401C1B2001BDA65 /* workSpaceData.json in Resources */,
 				54BAEAF424019A20001BDA65 /* Main.storyboard in Resources */,
+				54C3DB27241DC04100D9B7FD /* workSpaceData.json in Resources */,
 				54BAEAF124019A20001BDA65 /* Preview Assets.xcassets in Resources */,
 				54DDF9F42410247F00E77874 /* whatsapp.png in Resources */,
 				54DDF9FD2410247F00E77874 /* outlook.png in Resources */,
@@ -243,6 +323,7 @@
 				54DDF9F62410247F00E77874 /* gmailSelected.png in Resources */,
 				54DDF9FC2410247F00E77874 /* blank.png in Resources */,
 				54DDF9F92410247F00E77874 /* messengerSelected.png in Resources */,
+				54C3DB26241DC04100D9B7FD /* appData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,20 +334,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C3DB41241DC05400D9B7FD /* GridItemBoundsPreferencesKey.swift in Sources */,
 				54BAEB072401C9C1001BDA65 /* Data.swift in Sources */,
+				54C3DB44241DC05400D9B7FD /* GridItem.swift in Sources */,
+				54C3DB47241DC05400D9B7FD /* LayoutMath.swift in Sources */,
+				54C3DB42241DC05400D9B7FD /* StaggeredGridStyle.swift in Sources */,
+				54C3DB3B241DC05400D9B7FD /* GridStyle.swift in Sources */,
 				54BAEB112401E56E001BDA65 /* WorkSpaceListing.swift in Sources */,
 				54DDFA012410249700E77874 /* WorkSpaceView.swift in Sources */,
 				54DDF9FF2410248D00E77874 /* WorkSpaceMenu.swift in Sources */,
 				54BAEAEC24019A1E001BDA65 /* Owl.xcdatamodeld in Sources */,
+				54C3DB40241DC05400D9B7FD /* EnvironmentValues+GridStyle.swift in Sources */,
 				54BAEB0B2401D289001BDA65 /* UserData.swift in Sources */,
+				54C3DB3C241DC05400D9B7FD /* View+GridStyle.swift in Sources */,
+				54C3DB3E241DC05400D9B7FD /* GridPreferences.swift in Sources */,
+				54C3DB49241DC06200D9B7FD /* AllAppListingView.swift in Sources */,
+				54C3DB43241DC05400D9B7FD /* ModularGridStyle.swift in Sources */,
 				54BAEAFF2401C003001BDA65 /* WorkSpaceRow.swift in Sources */,
 				54BAEB052401C23B001BDA65 /* WorkSpace.swift in Sources */,
+				54C3DB3F241DC05400D9B7FD /* GridPreferencesModifier.swift in Sources */,
+				54C3DB45241DC05400D9B7FD /* Tracks.swift in Sources */,
 				54BAEB132401FD33001BDA65 /* AppListing.swift in Sources */,
 				541F10052403940600E1088D /* BrowserView.swift in Sources */,
-				54BAEB1C24022D5C001BDA65 /* AppIconSideBar.swift in Sources */,
+				54BAEB1C24022D5C001BDA65 /* AppIcon.swift in Sources */,
+				54C3DB3A241DC05400D9B7FD /* Grid+Inits.swift in Sources */,
 				54BAEB1A24022682001BDA65 /* App.swift in Sources */,
+				54C3DB3D241DC05400D9B7FD /* GridStyleKey.swift in Sources */,
 				54BAEAE924019A1E001BDA65 /* ContentView.swift in Sources */,
 				54BAEAE724019A1E001BDA65 /* AppDelegate.swift in Sources */,
+				54C3DB46241DC05400D9B7FD /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
