@@ -14,16 +14,16 @@ struct WorkSpaceView: View {
     @State var selectedApp : App?
     var browserTabs : [App:BrowserView]
     var seenSoFar : [App]
-    var appStack : [App]
-    {
+    
+    var appStack : [App] {
         var stack : [App] = workSpace?.apps ?? []
         if selectedApp != nil {
             stack.swapAt(stack.firstIndex(of: selectedApp!) ?? 0, stack.count-1)
         }
-        
         return stack
-        
     }
+    
+    @State var showAppPicker: Bool = false
     
     init(workSpace: Binding<WorkSpace?>, selectedApp: App?) {
         self.browserTabs = [App:BrowserView]()
@@ -38,7 +38,6 @@ struct WorkSpaceView: View {
     
     func goBack() {
         withAnimation() {
-            
             workSpace = nil
             selectedApp = nil
         }
@@ -46,6 +45,9 @@ struct WorkSpaceView: View {
     
     func addApp() {
         print("Add app")
+        withAnimation() {
+            showAppPicker = true
+        }
     }
     
     var body: some View {
@@ -54,7 +56,6 @@ struct WorkSpaceView: View {
                 Button(action: goBack) {
                     Image(nsImage: NSImage(named: NSImage.touchBarGoDownTemplateName)!)
                 }
-                
                 
                 WorkSpaceAppListing(apps: workSpace?.apps, selectedApp: $selectedApp)
                 
@@ -73,9 +74,14 @@ struct WorkSpaceView: View {
                 if selectedApp == nil {
                     Color.yellow
                 }
-                
             }
         }
+        .sheet(isPresented: self.$showAppPicker) {
+            AppPickerView()
+        }
+//        .gridStyle(
+//            self.style
+//        )
     }
 }
 

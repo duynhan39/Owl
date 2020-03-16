@@ -21,8 +21,8 @@ extension App {
         ImageStore.shared.image(name: name)
     }
     
-    var selectedImage: Image {
-        ImageStore.shared.image(name: "\(name)Selected")
-    }
+//    var selectedImage: Image {
+//        ImageStore.shared.image(name: "\(name)Selected")
+//    }
 }
 

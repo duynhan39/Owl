@@ -26,15 +26,7 @@ struct AppIcon: View {
     var isSelected: Bool
     var body: some View {
         
-        var image: Image
-            
-        if isSelected{
-            image = app.selectedImage
-        } else {
-            image = app.image
-        }
-            
-        return image
+        app.image
             .resizable()
             .aspectRatio(1.0, contentMode: .fit)
             .frame(width: AppIconMeasures.iconEdge, height: AppIconMeasures.iconEdge)
@@ -44,6 +36,7 @@ struct AppIcon: View {
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.gray, lineWidth: AppIconMeasures.stokerWidth))
             .padding(AppIconMeasures.outterPadding)
+            .saturation( isSelected ? 1.0 : 0.0)
         
 //        var view: Image
 //        if isSelected {

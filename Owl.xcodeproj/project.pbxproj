@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540B6F25241EF223006489C8 /* gmail.png in Resources */ = {isa = PBXBuildFile; fileRef = 540B6F20241EF223006489C8 /* gmail.png */; };
+		540B6F26241EF223006489C8 /* messenger.png in Resources */ = {isa = PBXBuildFile; fileRef = 540B6F21241EF223006489C8 /* messenger.png */; };
+		540B6F27241EF223006489C8 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 540B6F22241EF223006489C8 /* instagram.png */; };
+		540B6F28241EF223006489C8 /* outlook.png in Resources */ = {isa = PBXBuildFile; fileRef = 540B6F23241EF223006489C8 /* outlook.png */; };
+		540B6F29241EF223006489C8 /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 540B6F24241EF223006489C8 /* whatsapp.png */; };
 		541F10052403940600E1088D /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541F10042403940600E1088D /* BrowserView.swift */; };
 		54ABBB00241D7A0800B4777A /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ABBAFF241D7A0800B4777A /* GridView.swift */; };
 		54BAEAE724019A1E001BDA65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAE624019A1E001BDA65 /* AppDelegate.swift */; };
@@ -42,24 +47,19 @@
 		54C3DB1D241DB11400D9B7FD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB1A241DB11400D9B7FD /* Card.swift */; };
 		54C3DB1E241DB11400D9B7FD /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB1B241DB11400D9B7FD /* Color+Random.swift */; };
 		54C3DB1F241DB11400D9B7FD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3DB1C241DB11400D9B7FD /* Item.swift */; };
-		54DDF9F32410247F00E77874 /* outlookSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9E82410247E00E77874 /* outlookSelected.png */; };
-		54DDF9F42410247F00E77874 /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9E92410247E00E77874 /* whatsapp.png */; };
-		54DDF9F52410247F00E77874 /* messenger.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9EA2410247E00E77874 /* messenger.png */; };
-		54DDF9F62410247F00E77874 /* gmailSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9EB2410247F00E77874 /* gmailSelected.png */; };
-		54DDF9F72410247F00E77874 /* whatsappSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9EC2410247F00E77874 /* whatsappSelected.png */; };
-		54DDF9F82410247F00E77874 /* gmail.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9ED2410247F00E77874 /* gmail.png */; };
-		54DDF9F92410247F00E77874 /* messengerSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9EE2410247F00E77874 /* messengerSelected.png */; };
-		54DDF9FA2410247F00E77874 /* instagramSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9EF2410247F00E77874 /* instagramSelected.png */; };
-		54DDF9FB2410247F00E77874 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9F02410247F00E77874 /* instagram.png */; };
 		54DDF9FC2410247F00E77874 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9F12410247F00E77874 /* blank.png */; };
-		54DDF9FD2410247F00E77874 /* outlook.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DDF9F22410247F00E77874 /* outlook.png */; };
 		54DDF9FF2410248D00E77874 /* WorkSpaceMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DDF9FE2410248D00E77874 /* WorkSpaceMenu.swift */; };
 		54DDFA012410249700E77874 /* WorkSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DDFA002410249700E77874 /* WorkSpaceView.swift */; };
-		54DE5CF5241C5B8300DF6605 /* AllAppListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DE5CF4241C5B8300DF6605 /* AllAppListingView.swift */; };
+		54DE5CF5241C5B8300DF6605 /* AppPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DE5CF4241C5B8300DF6605 /* AppPickerView.swift */; };
 		54DE5CF7241C628100DF6605 /* appData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54DE5CF6241C628100DF6605 /* appData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		540B6F20241EF223006489C8 /* gmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gmail.png; path = Owl/Resources/AppIcons/gmail.png; sourceTree = SOURCE_ROOT; };
+		540B6F21241EF223006489C8 /* messenger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = messenger.png; path = Owl/Resources/AppIcons/messenger.png; sourceTree = SOURCE_ROOT; };
+		540B6F22241EF223006489C8 /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = instagram.png; path = Owl/Resources/AppIcons/instagram.png; sourceTree = SOURCE_ROOT; };
+		540B6F23241EF223006489C8 /* outlook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = outlook.png; path = Owl/Resources/AppIcons/outlook.png; sourceTree = SOURCE_ROOT; };
+		540B6F24241EF223006489C8 /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whatsapp.png; path = Owl/Resources/AppIcons/whatsapp.png; sourceTree = SOURCE_ROOT; };
 		541F10042403940600E1088D /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
 		54ABBAFF241D7A0800B4777A /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		54BAEAE324019A1E001BDA65 /* Owl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Owl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,20 +98,10 @@
 		54C3DB1A241DB11400D9B7FD /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		54C3DB1B241DB11400D9B7FD /* Color+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
 		54C3DB1C241DB11400D9B7FD /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		54DDF9E82410247E00E77874 /* outlookSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = outlookSelected.png; path = Owl/Resources/AppIcons/outlookSelected.png; sourceTree = SOURCE_ROOT; };
-		54DDF9E92410247E00E77874 /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whatsapp.png; path = Owl/Resources/AppIcons/whatsapp.png; sourceTree = SOURCE_ROOT; };
-		54DDF9EA2410247E00E77874 /* messenger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = messenger.png; path = Owl/Resources/AppIcons/messenger.png; sourceTree = SOURCE_ROOT; };
-		54DDF9EB2410247F00E77874 /* gmailSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gmailSelected.png; path = Owl/Resources/AppIcons/gmailSelected.png; sourceTree = SOURCE_ROOT; };
-		54DDF9EC2410247F00E77874 /* whatsappSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whatsappSelected.png; path = Owl/Resources/AppIcons/whatsappSelected.png; sourceTree = SOURCE_ROOT; };
-		54DDF9ED2410247F00E77874 /* gmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gmail.png; path = Owl/Resources/AppIcons/gmail.png; sourceTree = SOURCE_ROOT; };
-		54DDF9EE2410247F00E77874 /* messengerSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = messengerSelected.png; path = Owl/Resources/AppIcons/messengerSelected.png; sourceTree = SOURCE_ROOT; };
-		54DDF9EF2410247F00E77874 /* instagramSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = instagramSelected.png; path = Owl/Resources/AppIcons/instagramSelected.png; sourceTree = SOURCE_ROOT; };
-		54DDF9F02410247F00E77874 /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = instagram.png; path = Owl/Resources/AppIcons/instagram.png; sourceTree = SOURCE_ROOT; };
 		54DDF9F12410247F00E77874 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blank.png; path = Owl/Resources/AppIcons/blank.png; sourceTree = SOURCE_ROOT; };
-		54DDF9F22410247F00E77874 /* outlook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = outlook.png; path = Owl/Resources/AppIcons/outlook.png; sourceTree = SOURCE_ROOT; };
 		54DDF9FE2410248D00E77874 /* WorkSpaceMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkSpaceMenu.swift; sourceTree = "<group>"; };
 		54DDFA002410249700E77874 /* WorkSpaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkSpaceView.swift; sourceTree = "<group>"; };
-		54DE5CF4241C5B8300DF6605 /* AllAppListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAppListingView.swift; sourceTree = "<group>"; };
+		54DE5CF4241C5B8300DF6605 /* AppPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPickerView.swift; sourceTree = "<group>"; };
 		54DE5CF6241C628100DF6605 /* appData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = appData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		540B6F1F241EF18B006489C8 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				54BAEAED24019A20001BDA65 /* Assets.xcassets */,
+				54BAEAF224019A20001BDA65 /* Main.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		54BAEADA24019A1E001BDA65 = {
 			isa = PBXGroup;
 			children = (
@@ -149,12 +148,11 @@
 				54BAEAE824019A1E001BDA65 /* ContentView.swift */,
 				54C3DB22241DB19100D9B7FD /* MainMenu */,
 				54C3DB21241DB13400D9B7FD /* WorkSpace */,
-				54C3DB20241DB11800D9B7FD /* Demo */,
 				54C3DAFA241DB0AC00D9B7FD /* Grid */,
 				54BAEB032401C226001BDA65 /* Models */,
 				54BAEB002401C10C001BDA65 /* Resources */,
-				54BAEAED24019A20001BDA65 /* Assets.xcassets */,
-				54BAEAF224019A20001BDA65 /* Main.storyboard */,
+				54C3DB20241DB11800D9B7FD /* Demo */,
+				540B6F1F241EF18B006489C8 /* Supporting files */,
 				54BAEAF524019A20001BDA65 /* Info.plist */,
 				54BAEAF624019A20001BDA65 /* Owl.entitlements */,
 				54BAEAEA24019A1E001BDA65 /* Owl.xcdatamodeld */,
@@ -195,16 +193,11 @@
 			isa = PBXGroup;
 			children = (
 				54DDF9F12410247F00E77874 /* blank.png */,
-				54DDF9ED2410247F00E77874 /* gmail.png */,
-				54DDF9EB2410247F00E77874 /* gmailSelected.png */,
-				54DDF9F02410247F00E77874 /* instagram.png */,
-				54DDF9EF2410247F00E77874 /* instagramSelected.png */,
-				54DDF9EA2410247E00E77874 /* messenger.png */,
-				54DDF9EE2410247F00E77874 /* messengerSelected.png */,
-				54DDF9F22410247F00E77874 /* outlook.png */,
-				54DDF9E82410247E00E77874 /* outlookSelected.png */,
-				54DDF9E92410247E00E77874 /* whatsapp.png */,
-				54DDF9EC2410247F00E77874 /* whatsappSelected.png */,
+				540B6F20241EF223006489C8 /* gmail.png */,
+				540B6F22241EF223006489C8 /* instagram.png */,
+				540B6F21241EF223006489C8 /* messenger.png */,
+				540B6F23241EF223006489C8 /* outlook.png */,
+				540B6F24241EF223006489C8 /* whatsapp.png */,
 			);
 			path = "App Icons";
 			sourceTree = "<group>";
@@ -273,7 +266,7 @@
 				541F10042403940600E1088D /* BrowserView.swift */,
 				54BAEB1B24022D5C001BDA65 /* AppIcon.swift */,
 				54BAEB122401FD33001BDA65 /* WorkSpaceAppListing.swift */,
-				54DE5CF4241C5B8300DF6605 /* AllAppListingView.swift */,
+				54DE5CF4241C5B8300DF6605 /* AppPickerView.swift */,
 				54DDFA002410249700E77874 /* WorkSpaceView.swift */,
 			);
 			path = WorkSpace;
@@ -356,21 +349,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54DDF9F52410247F00E77874 /* messenger.png in Resources */,
-				54DDF9F72410247F00E77874 /* whatsappSelected.png in Resources */,
 				54BAEB022401C1B2001BDA65 /* workSpaceData.json in Resources */,
+				540B6F28241EF223006489C8 /* outlook.png in Resources */,
+				540B6F26241EF223006489C8 /* messenger.png in Resources */,
 				54BAEAF424019A20001BDA65 /* Main.storyboard in Resources */,
+				540B6F27241EF223006489C8 /* instagram.png in Resources */,
 				54BAEAF124019A20001BDA65 /* Preview Assets.xcassets in Resources */,
-				54DDF9F42410247F00E77874 /* whatsapp.png in Resources */,
-				54DDF9FD2410247F00E77874 /* outlook.png in Resources */,
-				54DDF9FB2410247F00E77874 /* instagram.png in Resources */,
-				54DDF9F82410247F00E77874 /* gmail.png in Resources */,
-				54DDF9FA2410247F00E77874 /* instagramSelected.png in Resources */,
-				54DDF9F32410247F00E77874 /* outlookSelected.png in Resources */,
 				54BAEAEE24019A20001BDA65 /* Assets.xcassets in Resources */,
-				54DDF9F62410247F00E77874 /* gmailSelected.png in Resources */,
 				54DDF9FC2410247F00E77874 /* blank.png in Resources */,
-				54DDF9F92410247F00E77874 /* messengerSelected.png in Resources */,
+				540B6F25241EF223006489C8 /* gmail.png in Resources */,
+				540B6F29241EF223006489C8 /* whatsapp.png in Resources */,
 				54DE5CF7241C628100DF6605 /* appData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +403,7 @@
 				54BAEAE924019A1E001BDA65 /* ContentView.swift in Sources */,
 				54C3DAF6241DB00100D9B7FD /* ModularGridView.swift in Sources */,
 				54BAEAE724019A1E001BDA65 /* AppDelegate.swift in Sources */,
-				54DE5CF5241C5B8300DF6605 /* AllAppListingView.swift in Sources */,
+				54DE5CF5241C5B8300DF6605 /* AppPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

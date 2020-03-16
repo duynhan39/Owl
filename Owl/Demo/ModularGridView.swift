@@ -31,7 +31,7 @@ struct ModularGridView: View {
                             x: preferences[self.selection].midX,
                             y: preferences[self.selection].midY
                         )
-                        .animation(.linear)
+//                        .animation(.linear)
                 }
                 .padding(16)
             }
