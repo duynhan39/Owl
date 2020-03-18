@@ -14,12 +14,18 @@ struct WorkSpaceMenu: View {
         
         ZStack {
             VStack(alignment: .leading, spacing: 6) {
-                Text(" Spaces")
-                    .multilineTextAlignment(.leading)
-                    .font(.custom("Times New Roman", size: 40))
+                VStack(alignment: .leading) {
+                Text("Hi Nhan")
+                    .font(.custom("Times New Roman", size: 60))
+                
+                Text("What do you want to work on today?")
+                    .font(.custom("Times New Roman", size: 20))
+                }.padding()
                 
                 WorkSpaceListing(presentedSpace: $presentedSpace)
-                //.listStyle(SidebarListStyle())
+                    .background(Color.yellow)
+//                    .background(Color(NSColor.windowBackgroundColor))
+           
             }
             
             GeometryReader { geometry in

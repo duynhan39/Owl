@@ -9,6 +9,25 @@
 import SwiftUI
 
 struct AppPickerView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+//    let rightColumnWidth = GeometryPreferenceReader(
+//        key: AppendValue<RightColumnWidth>.self,
+//        value: { [$0.size.width] }
+//    )
+    let buttonWidth: CGFloat = 100
+    
+    func cancel() {
+        print("Cancel")
+        self.presentationMode.wrappedValue.dismiss()
+    }
+    
+    func add() {
+        print("Add")
+        self.presentationMode.wrappedValue.dismiss()
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Add a new app to your current Work Space")
@@ -19,23 +38,39 @@ struct AppPickerView: View {
                     VStack {
                         AppIcon(app: app, isSelected: true)
                         Text(app.officialName)
-                            .foregroundColor(Color.secondary)
-                        
-                    }//.padding()
-//                        .background(Color.yellow)
-                        
-//                        .offset(x: 0, y:50)
-                    
+                            .foregroundColor(Color(NSColor.textColor))
+                    }
                 }
-                //.background(Color.red)
-
-                
             }.gridStyle(
                 ModularGridStyle(columns: .min(100), rows: .fixed(100))
             )
-//            .padding()
-        }.frame(width: 600, height: 300)
-            .background(Color.primary)
+            
+            HStack {
+                Button("Cancel", action: cancel)
+//                    .frame(width: buttonWidth)
+                Spacer()
+                Button("Add", action: add)
+//                    .frame(width: buttonWidth)
+//                {
+//                    Text("Add")
+//                        .foregroundC .olor(Color(NSColor.controlAccentColor))
+//                }
+//                .background(RoundedRectangle(cornerRadius: 5, style: .continuous))
+//                    .buttonStyle()
+//                .foregroundColor(Color(NSColor.controlAccentColor))
+//                    .clipped()
+//                 .clipped()
+//                    .background(Color(NSColor.controlAccentColor))
+                
+//                .buttonStyle(AppButtonStyle())
+//                    .cornerRadius(5)
+//                    .colorMultiply(Color(NSColor.controlAccentColor))
+                
+            }.padding()
+            
+        }.frame(width: 600, height: 450)
+            .background(Color(NSColor.windowBackgroundColor) )
+//        .assignMaxPreference(for: rightColumnWidth.key, to: $buttonWidth)
     }
 }
 

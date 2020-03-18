@@ -13,9 +13,8 @@ struct WorkSpaceListing: View {
     @Binding var presentedSpace : WorkSpace?
     
     var body: some View {
-        List {
+        ScrollView {
             ForEach(userData.allSpaces) { space in
-                
                 Button(action: {
                     withAnimation() {
                         self.presentedSpace = space
@@ -26,7 +25,12 @@ struct WorkSpaceListing: View {
                 }
                 .buttonStyle(AppButtonStyle())
             }
+            .padding(6)
+            
+            Spacer()
         }
+        
+        //.foregroundColor(Color.red)
         
     }
 }
