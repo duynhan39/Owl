@@ -10,10 +10,10 @@ import Foundation
 import SwiftUI
 import ImageIO
 
-class JSONApp : Hashable, Codable, Identifiable  {
-    var content:[AppInfo]?
+class JSONWorkSpace : Hashable, Codable, Identifiable  {
+    var content:[WorkSpace]?
     
-    static func == (lhs: JSONApp, rhs: JSONApp) -> Bool {
+    static func == (lhs: JSONWorkSpace, rhs: JSONWorkSpace) -> Bool {
         return lhs.content == rhs.content
     }
 
@@ -22,10 +22,10 @@ class JSONApp : Hashable, Codable, Identifiable  {
     }
 }
 
-class JSONWorkSpace : Hashable, Codable, Identifiable  {
-    var content:[WorkSpace]?
+class JSONApp : Hashable, Codable, Identifiable  {
+    var content:[AppInfo]?
     
-    static func == (lhs: JSONWorkSpace, rhs: JSONWorkSpace) -> Bool {
+    static func == (lhs: JSONApp, rhs: JSONApp) -> Bool {
         return lhs.content == rhs.content
     }
 
@@ -42,10 +42,10 @@ struct DataFile {
 //var workSpacesData = JSONData<WorkSpace>(DataFile.workSpace)
 //let workSpacesData = load(DataFile.workSpace)
 
-let workSpacesData : JSONWorkSpace = load(DataFile.workSpace)
+let workSpacesData : JSONWorkSpace = load(DataFile.workSpace) ?? JSONWorkSpace()
 let workSpacesInfo: [WorkSpace] = workSpacesData.content ?? []
 
-let appsData : JSONApp = load(DataFile.appData)
+let appsData : JSONApp = load(DataFile.appData) ?? JSONApp()
 let appsInfo: [AppInfo] = appsData.content ?? []
 
 func getURL(of filename: String, isResources: Bool) -> URL {
@@ -65,21 +65,18 @@ func getURL(of filename: String, isResources: Bool) -> URL {
     }
 }
 
-func load<T: Decodable>(_ filename: String) -> T {
-//    let data: Data
-    
+func load<T: Decodable>(_ filename: String) -> T? {
     var url = getURL(of: filename, isResources: false)
     if FileManager.default.fileExists(atPath: url.path){
-//        print(url.path)
         return loadJSON(url)
-//        if data != nil {
-//            return data
-//        }
     }
     
     url = getURL(of: filename, isResources: true)
-    return loadJSON(url)
+    if FileManager.default.fileExists(atPath: url.path){
+        return loadJSON(url)
+    }
     
+    return nil
 }
 
 func loadJSON<T: Decodable>(_ url: URL) -> T {
