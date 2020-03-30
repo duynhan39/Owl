@@ -43,6 +43,6 @@ struct AppIcon: View {
 
 struct AppIconSideBar_Previews: PreviewProvider {
     static var previews: some View {
-        AppIcon(app: workSpacesInfo[0].apps[0], isSelected: true)
+        AppIcon(app: workSpacesInfo[0].apps[0].info, isSelected: true)
     }
 }

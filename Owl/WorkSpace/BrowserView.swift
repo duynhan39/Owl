@@ -12,10 +12,10 @@ import WebKit
 struct Browser: NSViewRepresentable {
     typealias NSViewType = WKWebView
     let webView: WKWebView = WKWebView()
-    var app: AppInfo?
+    var app: App?
 
     func makeNSView(context: NSViewRepresentableContext<Browser>) -> WKWebView {
-        guard let urlString : String = app?.url else { return webView }
+        guard let urlString : String = appsInfo[app?.name ?? ""]?.url else { return webView }
         guard let url = URL(string: urlString) else {
             print("FAILED TO LOAD \(urlString)")
             return webView
@@ -29,7 +29,7 @@ struct Browser: NSViewRepresentable {
 }
 
 struct BrowserView: View {
-    var app: AppInfo?
+    var app: App?
     var body: some View {
         GeometryReader { geometry in
             ScrollView {

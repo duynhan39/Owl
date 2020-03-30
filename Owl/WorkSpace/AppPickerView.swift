@@ -27,15 +27,12 @@ struct AppPickerView: View {
         dismiss()
     }
     
-//    func add() {
-//        print("Add")
-//        self.presentationMode.wrappedValue.dismiss()
-//    }
     func selectApp(app : AppInfo) {
         print("Selected app \(app)")
         
         if workSpace != nil {
-            workSpace?.apps += [app]
+            let newApp = App(appName: app.name, id: workSpace?.getNewAppID() ?? 0)
+            workSpace?.apps += [ newApp ]
         }
         
 //        save(from: workSpacesD, to: DataFile.workSpace)
@@ -49,7 +46,7 @@ struct AppPickerView: View {
                 .padding()
             
             ScrollView {
-                Grid(appsInfo) { app in
+                Grid(appsInfoArray) { app in
                     Button(action: {
 //                        self.selectedApp = app
                         self.selectApp(app: app)
@@ -63,27 +60,6 @@ struct AppPickerView: View {
                         }
                     }.buttonStyle(AppButtonStyle())
                 }
-                
-//                .overlayPreferenceValue(GridItemBoundsPreferencesKey.self) { preferences in
-//                    ForEach(self.selections) { selection in
-//                        RoundedRectangle(cornerRadius: 16)
-//                            .strokeBorder(lineWidth: 4)
-//                            .foregroundColor(.white)
-//                            .frame(
-//                                width: preferences[selection].width,
-//                                height: preferences[selection].height
-//                            )
-//                            .position(
-//                                x: preferences[selection].midX,
-//                                y: preferences[selection].midY
-//                            )
-////                            .offset(x: 0,
-////                                    y: ( 0 - preferences[selection].height/2) * CGFloat( (self.selections.firstIndex(of: selection) ?? 0))
-////                            )
-////                            .animation(.linear)
-//                    }
-//                }
-//                .padding(16)
                 
             }.gridStyle(
                 ModularGridStyle(columns: .min(100), rows: .fixed(100))

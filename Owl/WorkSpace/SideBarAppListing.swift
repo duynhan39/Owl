@@ -15,8 +15,8 @@ struct AppButtonStyle: ButtonStyle {
 }
 
 struct SideBarAppListing: View {
-    var apps: [AppInfo]?
-    @Binding var selectedApp: AppInfo?
+    var apps: [App]?
+    @Binding var selectedApp: App?
     
     var body: some View {
         
@@ -26,7 +26,7 @@ struct SideBarAppListing: View {
                     self.selectedApp = app
                 })
                 {
-                    AppIcon(app: app, isSelected: self.selectedApp == app)
+                    AppIcon(app: app.info, isSelected: self.selectedApp == app)
                 }.buttonStyle(AppButtonStyle())
             }
             Spacer()

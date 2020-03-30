@@ -23,8 +23,8 @@ class Element: Hashable, Codable, Identifiable {
         self.name = name
     }
     
-    var hashValue: Int {
-        return self.id
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
     
     static func == (lhs: Element, rhs: Element) -> Bool {

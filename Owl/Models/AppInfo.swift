@@ -17,12 +17,19 @@ class AppInfo: Hashable, Codable, Identifiable {
     var url: String
     
     static func == (lhs: AppInfo, rhs: AppInfo) -> Bool {
-        return lhs.id == rhs.id
+        return lhs.name == rhs.name
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
         hasher.combine(name)
+    }
+    
+    init() {
+        id = 0
+        name = ""
+        officialName = ""
+        url = ""
     }
 }
 
@@ -30,9 +37,5 @@ extension AppInfo {
     var image: Image {
         ImageStore.shared.image(name: name)
     }
-    
-//    var selectedImage: Image {
-//        ImageStore.shared.image(name: "\(name)Selected")
-//    }
 }
 

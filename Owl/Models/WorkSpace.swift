@@ -13,8 +13,9 @@ class WorkSpace: Hashable, Codable, Identifiable {
     var id: Int
     var title: String
     var description: String
+    var appIDCounter: Int
     
-    var apps: [AppInfo]
+    var apps: [App]
     
     static func == (lhs: WorkSpace, rhs: WorkSpace) -> Bool {
         return lhs.id == rhs.id
@@ -23,5 +24,10 @@ class WorkSpace: Hashable, Codable, Identifiable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
         hasher.combine(title)
+    }
+    
+    func getNewAppID() -> Int {
+        appIDCounter += 1
+        return appIDCounter
     }
 }

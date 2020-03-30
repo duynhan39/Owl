@@ -12,7 +12,7 @@ import ImageIO
 
 class JSONWorkSpace : Hashable, Codable, Identifiable  {
     var content:[WorkSpace]?
-    
+
     static func == (lhs: JSONWorkSpace, rhs: JSONWorkSpace) -> Bool {
         return lhs.content == rhs.content
     }
@@ -22,17 +22,17 @@ class JSONWorkSpace : Hashable, Codable, Identifiable  {
     }
 }
 
-class JSONApp : Hashable, Codable, Identifiable  {
-    var content:[AppInfo]?
-    
-    static func == (lhs: JSONApp, rhs: JSONApp) -> Bool {
-        return lhs.content == rhs.content
-    }
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(content)
-    }
-}
+//class JSONApp : Hashable, Codable, Identifiable  {
+//    var content:[AppInfo]?
+//
+//    static func == (lhs: JSONApp, rhs: JSONApp) -> Bool {
+//        return lhs.content == rhs.content
+//    }
+//
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(content)
+//    }
+//}
 
 struct DataFile {
     static let workSpace = "workSpaceData.json"
@@ -44,9 +44,16 @@ struct DataFile {
 
 let workSpacesData : JSONWorkSpace = load(DataFile.workSpace) ?? JSONWorkSpace()
 let workSpacesInfo: [WorkSpace] = workSpacesData.content ?? []
+//workSpacesData.content ?? []
 
-let appsData : JSONApp = load(DataFile.appData) ?? JSONApp()
-let appsInfo: [AppInfo] = appsData.content ?? []
+//let appsData : JSONApp = load(DataFile.appData) ?? JSONApp()
+let appsInfo: [String:AppInfo] = load(DataFile.appData) ?? [String:AppInfo]()//appsData.content ?? []
+
+var appsInfoArray : [AppInfo] {
+    return Array(appsInfo.values).sorted { (lhs, rhs) -> Bool in
+        return lhs.id < rhs.id
+    }
+}
 
 func getURL(of filename: String, isResources: Bool) -> URL {
     if isResources {
@@ -100,7 +107,7 @@ func loadJSON<T: Decodable>(_ url: URL) -> T {
 func save(option: String) {
     switch option {
     case DataFile.appData:
-        save(from: appsData, to: option)
+        save(from: appsInfo, to: option)
     case DataFile.workSpace:
         save(from: workSpacesData, to: option)
     default:
