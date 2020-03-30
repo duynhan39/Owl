@@ -11,12 +11,12 @@ import SwiftUI
 
 struct WorkSpaceView: View {
     @Binding var workSpace: WorkSpace?
-    @State var selectedApp : App?
-    var browserTabs : [App:BrowserView]
-    var seenSoFar : [App]
+    @State var selectedApp : AppInfo?
+    var browserTabs : [AppInfo:BrowserView]
+    var seenSoFar : [AppInfo]
     
-    var appStack : [App] {
-        var stack : [App] = workSpace?.apps ?? []
+    var appStack : [AppInfo] {
+        var stack : [AppInfo] = workSpace?.apps ?? []
         if selectedApp != nil {
             stack.swapAt(stack.firstIndex(of: selectedApp!) ?? 0, stack.count-1)
         }
@@ -25,8 +25,8 @@ struct WorkSpaceView: View {
     
     @State var showAppPicker: Bool = false
     
-    init(workSpace: Binding<WorkSpace?>, selectedApp: App?) {
-        self.browserTabs = [App:BrowserView]()
+    init(workSpace: Binding<WorkSpace?>, selectedApp: AppInfo?) {
+        self.browserTabs = [AppInfo:BrowserView]()
         self.seenSoFar = []
         self._workSpace = workSpace
         self.selectedApp = selectedApp
@@ -57,7 +57,7 @@ struct WorkSpaceView: View {
                     Image(nsImage: NSImage(named: NSImage.touchBarGoDownTemplateName)!)
                 }
                 
-                WorkSpaceAppListing(apps: workSpace?.apps, selectedApp: $selectedApp)
+                SideBarAppListing(apps: workSpace?.apps, selectedApp: $selectedApp)
                 
                 Button(action: addApp) {
                     Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
@@ -77,7 +77,7 @@ struct WorkSpaceView: View {
             }
         }
         .sheet(isPresented: self.$showAppPicker) {
-            AppPickerView()
+            AppPickerView(workSpace: self.$workSpace)
         }
 //        .gridStyle(
 //            self.style

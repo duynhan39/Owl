@@ -9,10 +9,19 @@
 import Foundation
 import SwiftUI
 
-struct WorkSpace: Hashable, Codable, Identifiable {
+class WorkSpace: Hashable, Codable, Identifiable {
     var id: Int
     var title: String
     var description: String
     
-    var apps: [App]
+    var apps: [AppInfo]
+    
+    static func == (lhs: WorkSpace, rhs: WorkSpace) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(title)
+    }
 }

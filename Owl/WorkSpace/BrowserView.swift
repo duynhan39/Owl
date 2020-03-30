@@ -12,7 +12,7 @@ import WebKit
 struct Browser: NSViewRepresentable {
     typealias NSViewType = WKWebView
     let webView: WKWebView = WKWebView()
-    var app: App?
+    var app: AppInfo?
 
     func makeNSView(context: NSViewRepresentableContext<Browser>) -> WKWebView {
         guard let urlString : String = app?.url else { return webView }
@@ -29,7 +29,7 @@ struct Browser: NSViewRepresentable {
 }
 
 struct BrowserView: View {
-    var app: App?
+    var app: AppInfo?
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
@@ -46,6 +46,6 @@ struct BrowserView: View {
 
 struct BrowserView_Previews: PreviewProvider {
     static var previews: some View {
-        BrowserView(app: workSpaceData[0].apps[1])
+        BrowserView(app: workSpacesInfo[0].apps[1])
     }
 }

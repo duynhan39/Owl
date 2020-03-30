@@ -14,13 +14,13 @@ struct AppButtonStyle: ButtonStyle {
     }
 }
 
-struct WorkSpaceAppListing: View {
-    var apps: [App]?
-    @Binding var selectedApp: App?
+struct SideBarAppListing: View {
+    var apps: [AppInfo]?
+    @Binding var selectedApp: AppInfo?
     
     var body: some View {
         
-        VStack {
+        ScrollView {
             ForEach(apps ?? []) { app in
                 Button(action: {
                     self.selectedApp = app
@@ -34,8 +34,8 @@ struct WorkSpaceAppListing: View {
     }
 }
 
-struct AppListing_Previews: PreviewProvider {
+struct SideBarAppListing_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceAppListing(apps: workSpaceData[0].apps, selectedApp: .constant(workSpaceData[0].apps[0]))
+        SideBarAppListing(apps: workSpacesInfo[0].apps, selectedApp: .constant(workSpacesInfo[0].apps[0]))
     }
 }

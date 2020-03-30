@@ -22,7 +22,7 @@ struct AppIconMeasures {
 }
 
 struct AppIcon: View {
-    var app: App
+    var app: AppInfo
     var isSelected: Bool
     var body: some View {
         
@@ -37,12 +37,12 @@ struct AppIcon: View {
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.gray, lineWidth: AppIconMeasures.stokerWidth))
             .padding(AppIconMeasures.outterPadding)
-            .saturation(isSelected ? 1.0 : 0.0)
+//            .saturation(isSelected ? 1.0 : 0.0)
     }
 }
 
 struct AppIconSideBar_Previews: PreviewProvider {
     static var previews: some View {
-        AppIcon(app: workSpaceData[0].apps[0], isSelected: true)
+        AppIcon(app: workSpacesInfo[0].apps[0], isSelected: true)
     }
 }

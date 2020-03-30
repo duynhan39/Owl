@@ -9,26 +9,31 @@
 import SwiftUI
 
 struct WorkSpaceListing: View {
-    @EnvironmentObject private var userData: UserData
+    @Binding var allSpaces : [WorkSpace]
     @Binding var presentedSpace : WorkSpace?
+    
+    let paddingLength : CGFloat = 6
     
     var body: some View {
         ScrollView {
-            ForEach(userData.allSpaces) { space in
+            ForEach(allSpaces.indices) { index in
                 Button(action: {
                     withAnimation() {
-                        self.presentedSpace = space
+                        self.presentedSpace = self.allSpaces[index]
 //                        print(self.presentedSpace)
                     }
                 }) {
-                    WorkSpaceRow(space: space)
+                    WorkSpaceRow(space: self.allSpaces[index])
                 }
                 .buttonStyle(AppButtonStyle())
             }
-            .padding(6)
+            .padding(paddingLength)
             
             Spacer()
         }
+        .padding(Edge.Set.all, paddingLength)
+//        .padding(Edge.Set.bottom, paddingLength)
+        .background(Color.yellow)
         
         //.foregroundColor(Color.red)
         
@@ -37,7 +42,7 @@ struct WorkSpaceListing: View {
 
 struct SpaceListView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceListing(presentedSpace: .constant(workSpaceData[1]))
+        WorkSpaceListing(allSpaces: .constant(workSpacesInfo), presentedSpace: .constant(nil))
             .environmentObject(UserData())
     }
 }

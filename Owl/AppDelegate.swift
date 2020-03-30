@@ -22,10 +22,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //            WorkSpaceView(space: workSpaceData[1], selectedApp: nil)
 //            .environment(\.managedObjectContext, persistentContainer.viewContext)
         
-            WorkSpaceMenu()
+            MainMenu()
             .environmentObject(UserData())
             
 //            AllAppListingView()
+            
+//            Test()
             
         // Create the window and set the content view. 
         window = NSWindow(

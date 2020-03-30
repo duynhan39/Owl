@@ -40,6 +40,6 @@ struct WorkSpaceRow: View {
 
 struct SpaceInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceRow(space: workSpaceData[1])
+        WorkSpaceRow(space: workSpacesInfo[1])
     }
 }

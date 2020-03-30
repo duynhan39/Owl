@@ -8,12 +8,13 @@
 
 import SwiftUI
 
-struct WorkSpaceMenu: View {
+struct MainMenu: View {
+    @State var allSpaces = workSpacesInfo
     @State var presentedSpace : WorkSpace? //= workSpaceData[0]
     var body: some View {
         
         ZStack {
-            VStack(alignment: .leading, spacing: 6) {
+             VStack(alignment: .leading, spacing: 6) {
                 VStack(alignment: .leading) {
                 Text("Hi Nhan")
                     .font(.custom("Times New Roman", size: 60))
@@ -22,8 +23,8 @@ struct WorkSpaceMenu: View {
                     .font(.custom("Times New Roman", size: 20))
                 }.padding()
                 
-                WorkSpaceListing(presentedSpace: $presentedSpace)
-                    .background(Color.yellow)
+                WorkSpaceListing(allSpaces: $allSpaces, presentedSpace: $presentedSpace)
+                    
 //                    .background(Color(NSColor.windowBackgroundColor))
            
             }
@@ -39,7 +40,7 @@ struct WorkSpaceMenu: View {
 
 struct WorkSpaceMenu_Previews: PreviewProvider {
     static var previews: some View {
-        WorkSpaceMenu()
+        MainMenu()
             .environmentObject(UserData())
     }
 }

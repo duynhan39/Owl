@@ -9,14 +9,24 @@
 import Foundation
 import SwiftUI
 
-struct App: Hashable, Codable, Identifiable {
+class AppInfo: Hashable, Codable, Identifiable {
+    
     var id: Int
     var name: String
     var officialName: String
     var url: String
+    
+    static func == (lhs: AppInfo, rhs: AppInfo) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(name)
+    }
 }
 
-extension App {
+extension AppInfo {
     var image: Image {
         ImageStore.shared.image(name: name)
     }
