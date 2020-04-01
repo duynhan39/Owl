@@ -49,11 +49,14 @@ let workSpacesInfo: [WorkSpace] = workSpacesData.content ?? []
 //let appsData : JSONApp = load(DataFile.appData) ?? JSONApp()
 let appsInfo: [String:AppInfo] = load(DataFile.appData) ?? [String:AppInfo]()//appsData.content ?? []
 
-var appsInfoArray : [AppInfo] {
-    return Array(appsInfo.values).sorted { (lhs, rhs) -> Bool in
-        return lhs.id < rhs.id
-    }
+let appsInfoArray : [AppInfo] = Array(appsInfo.values).sorted { (lhs, rhs) -> Bool in
+    return lhs.id < rhs.id
 }
+//{
+//    return Array(appsInfo.values).sorted { (lhs, rhs) -> Bool in
+//        return lhs.id < rhs.id
+//    }
+//}
 
 func getURL(of filename: String, isResources: Bool) -> URL {
     if isResources {

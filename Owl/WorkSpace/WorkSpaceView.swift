@@ -12,29 +12,37 @@ import SwiftUI
 struct WorkSpaceView: View {
     @Binding var workSpace: WorkSpace?
     @State var selectedApp : App?
-    var browserTabs : [App:BrowserView]
-    var seenSoFar : [App]
+    @State var browserTabs = [App:BrowserView]()
+//    @State var seenSoFar = [App]()
     
-    var appStack : [App] {
-        var stack : [App] = workSpace?.apps ?? []
-        if selectedApp != nil {
-            stack.swapAt(stack.firstIndex(of: selectedApp!) ?? 0, stack.count-1)
-        }
-        return stack
-    }
+    @State var appStack = [App]()
+//    {
+//        var stack = [App]()
+//        if selectedApp != nil {
+//            if browserTabs[selectedApp!] == nil {
+//                seenSoFar += [selectedApp!]
+//                browserTabs[selectedApp!] = BrowserView(app: selectedApp)
+//
+//            }
+////            stack = seenSoFar
+////            stack.swapAt(stack.firstIndex(of: selectedApp!) ?? 0, stack.count-1)
+//            seenSoFar.swapAt(seenSoFar.firstIndex(of: selectedApp!) ?? 0, seenSoFar.count-1)
+//        }
+//        return seenSoFar
+//    }
     
     @State var showAppPicker: Bool = false
     
-    init(workSpace: Binding<WorkSpace?>, selectedApp: App?) {
-        self.browserTabs = [App:BrowserView]()
-        self.seenSoFar = []
-        self._workSpace = workSpace
-        self.selectedApp = selectedApp
-        
-        for app in self.workSpace?.apps ?? [] {
-            browserTabs[app] = BrowserView(app: app)
-        }
-    }
+//    init(workSpace: Binding<WorkSpace?>, selectedApp: App?) {
+//        self.browserTabs = [App:BrowserView]()
+//        self.seenSoFar = []
+//        self._workSpace = workSpace
+//        self.selectedApp = selectedApp
+//        
+////        for app in self.workSpace?.apps ?? [] {
+////            browserTabs[app] = BrowserView(app: app)
+////        }
+//    }
     
     func goBack() {
         withAnimation() {
@@ -57,7 +65,7 @@ struct WorkSpaceView: View {
                     Image(nsImage: NSImage(named: NSImage.touchBarGoDownTemplateName)!)
                 }
                 
-                SideBarAppListing(apps: workSpace?.apps, selectedApp: $selectedApp)
+                SideBarAppListing(workSpace: workSpace ?? WorkSpace(), selectedApp: $selectedApp, delegate: self)
                 
                 Button(action: addApp) {
                     Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
@@ -92,3 +100,33 @@ struct WorkSpaceNavigationDetail_Previews: PreviewProvider {
     }
 }
 
+protocol ModifyableAppStack {
+//    associatedtype T
+    func select(app: App)
+    func remove(app: App)
+}
+
+
+extension WorkSpaceView: ModifyableAppStack {
+//    typealias T = App
+    
+    func select(app: App) {
+        //        if app != nil {
+        selectedApp = app
+        if browserTabs[app] == nil {
+            browserTabs[app] = BrowserView(app: app)
+            appStack += [app]
+            //                selectedApp = app
+        } //else {
+        appStack.swapAt(appStack.firstIndex(of: app) ?? 0, appStack.count-1)
+        //            }
+        //        }
+    }
+    
+    func remove(app: App) {
+        if (selectedApp != nil) {
+            browserTabs.removeValue(forKey: app)
+            appStack.removeAll { $0 == app }
+        }
+    }
+}

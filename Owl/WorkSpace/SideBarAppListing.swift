@@ -15,27 +15,41 @@ struct AppButtonStyle: ButtonStyle {
 }
 
 struct SideBarAppListing: View {
-    var apps: [App]?
+    @ObservedObject var workSpace: WorkSpace
     @Binding var selectedApp: App?
+    
+    var delegate : ModifyableAppStack? = nil
+//    @State var changed = false
     
     var body: some View {
         
         ScrollView {
-            ForEach(apps ?? []) { app in
+            ForEach(workSpace.apps) { app in
                 Button(action: {
-                    self.selectedApp = app
+                    self.delegate?.select(app: app)
                 })
                 {
-                    AppIcon(app: app.info, isSelected: self.selectedApp == app)
-                }.buttonStyle(AppButtonStyle())
+                    AppIcon(appInfo: app.info, isSelected: self.selectedApp == app)
+                }
+                .buttonStyle(AppButtonStyle())
+                .contextMenu {
+                    Button(action: {
+                        self.delegate?.remove(app: app)
+                        self.workSpace.removeApp(app: app)
+                    }) {
+                        Text("Remove")
+                    }
+                }
             }
+//            if changed || !changed {
             Spacer()
+//            }
         }
     }
 }
 
 struct SideBarAppListing_Previews: PreviewProvider {
     static var previews: some View {
-        SideBarAppListing(apps: workSpacesInfo[0].apps, selectedApp: .constant(workSpacesInfo[0].apps[0]))
+        SideBarAppListing(workSpace: workSpacesInfo[0], selectedApp: .constant(workSpacesInfo[0].apps[0]) )
     }
 }

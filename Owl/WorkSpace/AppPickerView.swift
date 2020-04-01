@@ -27,13 +27,13 @@ struct AppPickerView: View {
         dismiss()
     }
     
-    func selectApp(app : AppInfo) {
-        print("Selected app \(app)")
+    func selectApp(appInfo : AppInfo) {
+        //        print("Selected app \(appInfo)")
         
-        if workSpace != nil {
-            let newApp = App(appName: app.name, id: workSpace?.getNewAppID() ?? 0)
-            workSpace?.apps += [ newApp ]
-        }
+//        let newApp = App(appName: appInfo.name, id: workSpace?.getNewAppID() ?? 0)
+//        workSpace?.apps += [ newApp ]
+        
+        workSpace?.addApp(with: appInfo)
         
 //        save(from: workSpacesD, to: DataFile.workSpace)
         save(option: DataFile.workSpace)
@@ -46,16 +46,16 @@ struct AppPickerView: View {
                 .padding()
             
             ScrollView {
-                Grid(appsInfoArray) { app in
+                Grid(appsInfoArray) { appInfo in
                     Button(action: {
 //                        self.selectedApp = app
-                        self.selectApp(app: app)
+                        self.selectApp(appInfo: appInfo)
                         
                     })
                     {
                         VStack {
-                            AppIcon(app: app, isSelected: true)
-                            Text(app.officialName)
+                            AppIcon(appInfo: appInfo, isSelected: true)
+                            Text(appInfo.officialName)
                                 .foregroundColor(Color(NSColor.textColor))
                         }
                     }.buttonStyle(AppButtonStyle())
