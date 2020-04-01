@@ -34,9 +34,6 @@ struct BrowserView: View {
         GeometryReader { geometry in
             ScrollView {
                 Browser(app: self.app)
-//                    .tabItem {
-//                    Text("Browser")
-//                }
                 .frame(height: geometry.size.height)
                 .tag(1)
             }.frame(height: geometry.size.height)

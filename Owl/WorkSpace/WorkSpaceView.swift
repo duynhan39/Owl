@@ -13,37 +13,10 @@ struct WorkSpaceView: View {
     @Binding var workSpace: WorkSpace?
     @State var selectedApp : App?
     @State var browserTabs = [App:BrowserView]()
-//    @State var seenSoFar = [App]()
-    
     @State var appStack = [App]()
-//    {
-//        var stack = [App]()
-//        if selectedApp != nil {
-//            if browserTabs[selectedApp!] == nil {
-//                seenSoFar += [selectedApp!]
-//                browserTabs[selectedApp!] = BrowserView(app: selectedApp)
-//
-//            }
-////            stack = seenSoFar
-////            stack.swapAt(stack.firstIndex(of: selectedApp!) ?? 0, stack.count-1)
-//            seenSoFar.swapAt(seenSoFar.firstIndex(of: selectedApp!) ?? 0, seenSoFar.count-1)
-//        }
-//        return seenSoFar
-//    }
     
     @State var showAppPicker: Bool = false
-    
-//    init(workSpace: Binding<WorkSpace?>, selectedApp: App?) {
-//        self.browserTabs = [App:BrowserView]()
-//        self.seenSoFar = []
-//        self._workSpace = workSpace
-//        self.selectedApp = selectedApp
-//        
-////        for app in self.workSpace?.apps ?? [] {
-////            browserTabs[app] = BrowserView(app: app)
-////        }
-//    }
-    
+
     func goBack() {
         withAnimation() {
             workSpace = nil
@@ -87,9 +60,6 @@ struct WorkSpaceView: View {
         .sheet(isPresented: self.$showAppPicker) {
             AppPickerView(workSpace: self.$workSpace)
         }
-//        .gridStyle(
-//            self.style
-//        )
     }
 }
 
@@ -101,26 +71,20 @@ struct WorkSpaceNavigationDetail_Previews: PreviewProvider {
 }
 
 protocol ModifyableAppStack {
-//    associatedtype T
     func select(app: App)
     func remove(app: App)
 }
 
 
 extension WorkSpaceView: ModifyableAppStack {
-//    typealias T = App
     
     func select(app: App) {
-        //        if app != nil {
         selectedApp = app
         if browserTabs[app] == nil {
             browserTabs[app] = BrowserView(app: app)
             appStack += [app]
-            //                selectedApp = app
-        } //else {
+        }
         appStack.swapAt(appStack.firstIndex(of: app) ?? 0, appStack.count-1)
-        //            }
-        //        }
     }
     
     func remove(app: App) {

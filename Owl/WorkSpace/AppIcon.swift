@@ -66,7 +66,6 @@ extension Color {
                     a = Double(hexNumber & 0x000000ff) / 255
 
                     self.init(RGBColorSpace.sRGB, red: r, green: g, blue: b, opacity: a)
-//                    init(red: r, green: g, blue: b, alpha: a)
                     return
                 }
             }

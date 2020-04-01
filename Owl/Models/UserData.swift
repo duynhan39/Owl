@@ -10,9 +10,6 @@ import Combine
 import SwiftUI
 
 final class UserData: ObservableObject {
-//    @Published var showFavoritesOnly = false
     @Published var allSpaces = workSpacesInfo
     @Published var allApps = appsInfo
-    
-//    @Published var profile = Profile.default
 }

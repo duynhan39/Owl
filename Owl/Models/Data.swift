@@ -39,24 +39,14 @@ struct DataFile {
     static let appData = "appData.json"
 }
 
-//var workSpacesData = JSONData<WorkSpace>(DataFile.workSpace)
-//let workSpacesData = load(DataFile.workSpace)
-
 let workSpacesData : JSONWorkSpace = load(DataFile.workSpace) ?? JSONWorkSpace()
 let workSpacesInfo: [WorkSpace] = workSpacesData.content ?? []
-//workSpacesData.content ?? []
 
-//let appsData : JSONApp = load(DataFile.appData) ?? JSONApp()
 let appsInfo: [String:AppInfo] = load(DataFile.appData) ?? [String:AppInfo]()//appsData.content ?? []
 
 let appsInfoArray : [AppInfo] = Array(appsInfo.values).sorted { (lhs, rhs) -> Bool in
     return lhs.id < rhs.id
 }
-//{
-//    return Array(appsInfo.values).sorted { (lhs, rhs) -> Bool in
-//        return lhs.id < rhs.id
-//    }
-//}
 
 func getURL(of filename: String, isResources: Bool) -> URL {
     if isResources {
@@ -119,32 +109,17 @@ func save(option: String) {
 }
 
 func save<T: Encodable>(from data: T, to filename: String) {
-//    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-//        else {
-//            fatalError("[\(#file)]: Couldn't find \(filename) in main bundle to load data")
-//    }
-//
-//    do {
-//        let content = try JSONEncoder().encode(data)
-//        try content.write(to: file)
-//    } catch {
-//        fatalError("[\(#file)]: Couldn't save data to \(filename):\n\(error)")
-//    }
-    
     guard let file = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         else {
             fatalError("[\(#file)]: Couldn't find \(filename) in main bundle to load data")
     }
     let url = file.appendingPathComponent(filename)
     
-//    print(fileURL)
     do {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         
-        let jsonData = try
-//            JSONSerialization.data(withJSONObject: data, options: [])
-            encoder.encode(data)
+        let jsonData = try encoder.encode(data)
         let jsonString = String(data: jsonData, encoding: .utf8)
         print(jsonString!)
         try jsonData.write(to: url)

@@ -28,14 +28,7 @@ struct AppPickerView: View {
     }
     
     func selectApp(appInfo : AppInfo) {
-        //        print("Selected app \(appInfo)")
-        
-//        let newApp = App(appName: appInfo.name, id: workSpace?.getNewAppID() ?? 0)
-//        workSpace?.apps += [ newApp ]
-        
         workSpace?.addApp(with: appInfo)
-        
-//        save(from: workSpacesD, to: DataFile.workSpace)
         save(option: DataFile.workSpace)
         dismiss()
     }
@@ -48,9 +41,7 @@ struct AppPickerView: View {
             ScrollView {
                 Grid(appsInfoArray) { appInfo in
                     Button(action: {
-//                        self.selectedApp = app
                         self.selectApp(appInfo: appInfo)
-                        
                     })
                     {
                         VStack {
@@ -68,33 +59,13 @@ struct AppPickerView: View {
             
             HStack {
                 Button("Cancel", action: cancel)
-//                    .frame(width: buttonWidth)
                 Spacer()
-//                Button("Add", action: add)
-//                    .frame(width: buttonWidth)
-//                {
-//                    Text("Add")
-//                        .foregroundC .olor(Color(NSColor.controlAccentColor))
-//                }
-//                .background(RoundedRectangle(cornerRadius: 5, style: .continuous))
-//                    .buttonStyle()
-//                .foregroundColor(Color(NSColor.controlAccentColor))
-//                    .clipped()
-//                 .clipped()
-//                    .background(Color(NSColor.controlAccentColor))
-                
-//                .buttonStyle(AppButtonStyle())
-//                    .cornerRadius(5)
-//                    .colorMultiply(Color(NSColor.controlAccentColor))
+//                Button("Add", action: add) {}
                 
             }.padding()
             
         }.frame(width: 600, height: 450)
             .background(Color(NSColor.windowBackgroundColor) )
-        
-        
-        
-//        .assignMaxPreference(for: rightColumnWidth.key, to: $buttonWidth)
     }
 }
 
@@ -103,12 +74,4 @@ struct AddAnApp_Previews: PreviewProvider {
         AppPickerView(workSpace: .constant(workSpacesInfo[0]))
     }
 }
-
-
-//extension Int: Identifiable {
-//    public var id: Int {
-//        return self
-//    }
-//
-//}
 

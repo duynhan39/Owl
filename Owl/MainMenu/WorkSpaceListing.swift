@@ -20,7 +20,6 @@ struct WorkSpaceListing: View {
                 Button(action: {
                     withAnimation() {
                         self.presentedSpace = self.allSpaces[index]
-//                        print(self.presentedSpace)
                     }
                 }) {
                     WorkSpaceRow(space: self.allSpaces[index])
@@ -32,10 +31,7 @@ struct WorkSpaceListing: View {
             Spacer()
         }
         .padding(Edge.Set.all, paddingLength)
-//        .padding(Edge.Set.bottom, paddingLength)
         .background(Color.yellow)
-        
-        //.foregroundColor(Color.red)
         
     }
 }

@@ -19,7 +19,6 @@ struct SideBarAppListing: View {
     @Binding var selectedApp: App?
     
     var delegate : ModifyableAppStack? = nil
-//    @State var changed = false
     
     var body: some View {
         
@@ -41,9 +40,7 @@ struct SideBarAppListing: View {
                     }
                 }
             }
-//            if changed || !changed {
             Spacer()
-//            }
         }
     }
 }

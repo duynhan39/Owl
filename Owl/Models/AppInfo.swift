@@ -9,13 +9,22 @@
 import Foundation
 import SwiftUI
 
-class AppInfo: Hashable, Codable, Identifiable {
+final class AppInfo {
     
     var id: Int
     var name: String
     var officialName: String
     var url: String
     
+    init() {
+        id = 0
+        name = ""
+        officialName = ""
+        url = ""
+    }
+}
+
+extension AppInfo: Hashable, Codable, Identifiable {
     static func == (lhs: AppInfo, rhs: AppInfo) -> Bool {
         return lhs.name == rhs.name
     }
@@ -23,13 +32,6 @@ class AppInfo: Hashable, Codable, Identifiable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
         hasher.combine(name)
-    }
-    
-    init() {
-        id = 0
-        name = ""
-        officialName = ""
-        url = ""
     }
 }
 

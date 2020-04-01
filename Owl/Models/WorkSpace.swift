@@ -36,7 +36,6 @@ class WorkSpace: ObservableObject, Codable {
         self.description = try container.decode(String.self, forKey: .description)
         self.appIDCounter = try container.decode(Int.self, forKey: .appIDCounter)
         self.apps = try container.decode(Array<App>.self, forKey: .apps)
-        
     }
     
     func encode(to encoder: Encoder) throws {
@@ -47,7 +46,9 @@ class WorkSpace: ObservableObject, Codable {
         try container.encode(appIDCounter, forKey: .appIDCounter)
         try container.encode(apps, forKey: .apps)
     }
-    
+}
+
+extension WorkSpace {
     func setValue(id: Int = 0, title: String = "", description: String = "", appIDCounter: Int = 0, apps : [App] = []) {
         self.id = id
         self.title = title
@@ -75,8 +76,6 @@ class WorkSpace: ObservableObject, Codable {
             $0 == app
         }
     }
-    
-
 }
 
 

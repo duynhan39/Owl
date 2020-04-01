@@ -24,9 +24,7 @@ struct MainMenu: View {
                 }.padding()
                 
                 WorkSpaceListing(allSpaces: $allSpaces, presentedSpace: $presentedSpace)
-                    
 //                    .background(Color(NSColor.windowBackgroundColor))
-           
             }
             
             GeometryReader { geometry in
