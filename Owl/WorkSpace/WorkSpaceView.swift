@@ -70,15 +70,18 @@ struct WorkSpaceNavigationDetail_Previews: PreviewProvider {
     }
 }
 
+
+
 protocol ModifyableAppStack {
+    typealias T = App
     func select(app: App)
     func remove(app: App)
 }
 
-
 extension WorkSpaceView: ModifyableAppStack {
-    
+//    typealias T = App
     func select(app: App) {
+        print(app)
         selectedApp = app
         if browserTabs[app] == nil {
             browserTabs[app] = BrowserView(app: app)

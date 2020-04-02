@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainMenu: View {
     @State var allSpaces = workSpacesInfo
-    @State var presentedSpace : WorkSpace? //= workSpaceData[0]
+    @State var selectedSpace : WorkSpace? //= workSpaceData[0]
     var body: some View {
         
         ZStack {
@@ -23,14 +23,14 @@ struct MainMenu: View {
                     .font(.custom("Times New Roman", size: 20))
                 }.padding()
                 
-                WorkSpaceListing(allSpaces: $allSpaces, presentedSpace: $presentedSpace)
+                WorkSpaceListing(allSpaces: $allSpaces, presentedSpace: $selectedSpace)
 //                    .background(Color(NSColor.windowBackgroundColor))
             }
             
             GeometryReader { geometry in
                 ZStack() {
-                    WorkSpaceView(workSpace: self.$presentedSpace, selectedApp: nil)
-                }.offset(x: 0, y: self.presentedSpace != nil ? 0 : geometry.size.height)
+                    WorkSpaceView(workSpace: self.$selectedSpace, selectedApp: nil)
+                }.offset(x: 0, y: self.selectedSpace != nil ? 0 : geometry.size.height)
             }
         }
     }
