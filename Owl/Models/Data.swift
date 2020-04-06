@@ -35,6 +35,20 @@ import ImageIO
 //    }
 //}
 
+struct UserPreference {
+    static var backgroundColor = Color(NSColor.windowBackgroundColor)
+    static var textColor = Color(NSColor.textColor)
+    static var appIconStrokeColor = Color.gray
+    
+    static var selectedButtonColor = Color.gray
+    
+    static var primaryColor = Color.yellow
+    static var secondaryColor = Color.init(red: 0.89, green: 0.74, blue: 0.46)
+    
+    
+    static var paddingLength : CGFloat = 6
+}
+
 struct DataFile {
     static let workSpace = "userData.json"
     static let appData = "appData.json"

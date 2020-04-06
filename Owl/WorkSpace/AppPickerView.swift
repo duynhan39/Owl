@@ -46,7 +46,7 @@ struct AppPickerView: View {
                         VStack {
                             AppIcon(appInfo: appInfo, isSelected: true)
                             Text(appInfo.officialName)
-                                .foregroundColor(Color(NSColor.textColor))
+                                .foregroundColor(UserPreference.textColor)
                         }
                     }.buttonStyle(AppButtonStyle())
                 }
@@ -64,7 +64,7 @@ struct AppPickerView: View {
             }.padding()
             
         }.frame(width: 600, height: 450)
-            .background(Color(NSColor.windowBackgroundColor) )
+            .background(UserPreference.backgroundColor)
     }
 }
 

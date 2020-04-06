@@ -35,7 +35,7 @@ struct AppIcon: View {
 //            .background(Color(NSColor.windowBackgroundColor))
             .background(Color.white)
             .clipShape(Circle())
-            .overlay(Circle().stroke(Color.gray, lineWidth: AppIconMeasures.stokerWidth))
+            .overlay(Circle().stroke(UserPreference.appIconStrokeColor, lineWidth: AppIconMeasures.stokerWidth))
             .padding(AppIconMeasures.outterPadding)
             .saturation(isSelected ? 1.0 : 0.0)
     }

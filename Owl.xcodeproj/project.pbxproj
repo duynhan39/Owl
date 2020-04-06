@@ -14,6 +14,7 @@
 		54214033243A5E7B0083BE82 /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402E243A5E7B0083BE82 /* github.png */; };
 		54214034243A5E7B0083BE82 /* trello.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402F243A5E7B0083BE82 /* trello.png */; };
 		54214036243AA79E0083BE82 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54214035243AA79E0083BE82 /* UserInfo.swift */; };
+		54214038243AB5E40083BE82 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54214037243AB5E40083BE82 /* CustomButtonStyle.swift */; };
 		54746BC0242BF51B00F18694 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54746BBF242BF51B00F18694 /* Test.swift */; };
 		54ABBB00241D7A0800B4777A /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ABBAFF241D7A0800B4777A /* GridView.swift */; };
 		54BAEAE724019A1E001BDA65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAE624019A1E001BDA65 /* AppDelegate.swift */; };
@@ -70,6 +71,7 @@
 		5421402E243A5E7B0083BE82 /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
 		5421402F243A5E7B0083BE82 /* trello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trello.png; sourceTree = "<group>"; };
 		54214035243AA79E0083BE82 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		54214037243AB5E40083BE82 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		54746BBF242BF51B00F18694 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		54ABBAFF241D7A0800B4777A /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		54BAEAE324019A1E001BDA65 /* Owl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Owl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 				54BAEAE624019A1E001BDA65 /* AppDelegate.swift */,
 				54BAEAE824019A1E001BDA65 /* ContentView.swift */,
 				54746BBF242BF51B00F18694 /* Test.swift */,
+				54214037243AB5E40083BE82 /* CustomButtonStyle.swift */,
 				54C3DB22241DB19100D9B7FD /* MainMenu */,
 				54C3DB21241DB13400D9B7FD /* WorkSpace */,
 				54BAEB032401C226001BDA65 /* Models */,
@@ -425,6 +428,7 @@
 				541F10052403940600E1088D /* BrowserView.swift in Sources */,
 				54C3DB13241DB0AD00D9B7FD /* GridItemBoundsPreferencesKey.swift in Sources */,
 				54C3DB15241DB0AD00D9B7FD /* ModularGridStyle.swift in Sources */,
+				54214038243AB5E40083BE82 /* CustomButtonStyle.swift in Sources */,
 				54C3DB1F241DB11400D9B7FD /* Item.swift in Sources */,
 				54C3DB17241DB0AD00D9B7FD /* Tracks.swift in Sources */,
 				54ABBB00241D7A0800B4777A /* GridView.swift in Sources */,

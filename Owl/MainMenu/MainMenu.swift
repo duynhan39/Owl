@@ -15,10 +15,12 @@ struct MainMenu: View {
     @State var workSpaceStack = [WorkSpace]()
     @State var workSpaceViewTabs = [WorkSpace: WorkSpaceView]()
     
+    @Environment(\.colorScheme) var colorScheme
     
-//    func addWorkSpace() {
-//        
-//    }
+    
+    func addWorkSpace() {
+        print("Add new workSpace")
+    }
     
     
     var body: some View {
@@ -33,13 +35,33 @@ struct MainMenu: View {
                         .font(.custom("Times New Roman", size: 20))
                 }.padding()
                 
-                WorkSpaceListing(allSpaces: $allSpaces, presentedSpace: $selectedSpace)
-                //                    .background(Color(NSColor.windowBackgroundColor))
-                
-//                Button(action: addWorkSpace) {
-//                    Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
-//                }
+                ZStack {
+                    WorkSpaceListing(allSpaces: $allSpaces, presentedSpace: $selectedSpace)
+                    
+                    VStack {
+                        Spacer()
+                        
+                        HStack {
+                            Button(action: addWorkSpace) {
+                                Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
+                                    .padding()
+                            }
+                                
+                            .buttonStyle(ClickableRoundButtonStyle())
+                            .overlay(
+                                Capsule(style: .circular)
+                                    .stroke(UserPreference.primaryColor, lineWidth: colorScheme == .dark ? 1 : 0)
+                            )
+                                .shadow(color: UserPreference.textColor.opacity(colorScheme == .light ? 1 : 0), radius: 2, x: 1, y: 1)
+                            
+                            
+                            Spacer()
+                        }
+                    }.padding(UserPreference.paddingLength*2)
+                }
             }
+            
+            
             
             
             GeometryReader { geometry in

@@ -12,7 +12,7 @@ struct WorkSpaceListing: View {
     @Binding var allSpaces : [WorkSpace]
     @Binding var presentedSpace : WorkSpace?
     
-    let paddingLength : CGFloat = 6
+//    let paddingLength : CGFloat = 6
     
     var body: some View {
         ScrollView {
@@ -26,12 +26,12 @@ struct WorkSpaceListing: View {
                 }
                 .buttonStyle(AppButtonStyle())
             }
-            .padding(paddingLength)
+            .padding(UserPreference.paddingLength)
             
             Spacer()
         }
-        .padding(Edge.Set.all, paddingLength)
-        .background(Color.yellow)
+        .padding(Edge.Set.all, UserPreference.paddingLength)
+        .background(UserPreference.primaryColor)
         
     }
 }

@@ -11,8 +11,7 @@ import SwiftUI
 struct WorkSpaceRow: View {
     var space: WorkSpace
     
-    let textColor = Color(NSColor.textColor)
-    let backgroundColor = Color(NSColor.windowBackgroundColor)
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         HStack(alignment: .center) {
@@ -21,20 +20,21 @@ struct WorkSpaceRow: View {
                     .fontWeight(.bold)
                     .truncationMode(.tail)
                     .frame(minWidth: 20)
-                    .foregroundColor(textColor)
+                    .foregroundColor(UserPreference.textColor)
                     
                 Text(space.description)
                     .font(.caption)
                     .opacity(0.625)
                     .truncationMode(.middle)
                     .frame(minWidth: 20)
-                    .foregroundColor(textColor)
+                    .foregroundColor(UserPreference.textColor)
             }
             Spacer()
         }
         .padding()
-        .background(backgroundColor)
+        .background(UserPreference.backgroundColor)
         .cornerRadius(4)
+        .shadow(color: UserPreference.textColor.opacity(colorScheme == .light ? 0.6 : 0), radius: 2, x: 2, y: 2)
     }
 }
 

@@ -38,15 +38,17 @@ struct WorkSpaceView: View {
                 Button(action: goBack) {
                     Image(nsImage: NSImage(named: NSImage.touchBarGoDownTemplateName)!)
                 }
+//                .background(UserPreference.backgroundColor)
                 
                 SideBarAppListing(workSpace: workSpace ?? WorkSpace(), selectedApp: $selectedApp, delegate: self)
                 
                 Button(action: addApp) {
                     Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
                 }
+//                .background(UserPreference.backgroundColor)
             }
             .padding(5)
-            .background(Color.init(red: 0.89, green: 0.74, blue: 0.46))
+            .background(UserPreference.secondaryColor)
             
             ZStack {
                 ForEach(appStack) { app in
@@ -54,7 +56,7 @@ struct WorkSpaceView: View {
                 }
                 
                 if selectedApp == nil {
-                    Color.yellow
+                    UserPreference.primaryColor
                 }
             }
         }

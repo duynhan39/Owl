@@ -8,12 +8,6 @@
 
 import SwiftUI
 
-struct AppButtonStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-    }
-}
-
 struct SideBarAppListing: View {
     @ObservedObject var workSpace: WorkSpace
     @Binding var selectedApp: App?
@@ -48,6 +42,7 @@ struct SideBarAppListing: View {
             }
             Spacer()
         }
+        .background(UserPreference.secondaryColor)
     }
 }
 
