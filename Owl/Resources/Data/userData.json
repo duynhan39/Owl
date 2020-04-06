@@ -1,5 +1,5 @@
 {
-    "firstName": "Nhan",
+    "firstName": "Nhân",
     "lastName": "Cao",
     "userID": 0,
     "workSpaces":
@@ -42,5 +42,6 @@
         }
         
     ],
-    "appIDCounter": 5
+    "appIDCounter": 5,
+    "workSpaceIDCounter": 2
 }

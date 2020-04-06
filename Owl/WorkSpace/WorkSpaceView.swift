@@ -61,7 +61,8 @@ struct WorkSpaceView: View {
             }
         }
         .sheet(isPresented: self.$showAppPicker) {
-            AppPickerView(workSpace: self.$workSpace)
+            Text("HIIIIII")
+//            AppPickerView(workSpace: self.$workSpace)
         }
     }
 }

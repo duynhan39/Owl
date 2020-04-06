@@ -21,6 +21,7 @@ class UserData: Codable, Hashable, Identifiable {
     var userID:Int = 0
     var workSpaces:[WorkSpace]? = nil
     var appIDCounter:Int = 0
+    var workSpaceIDCounter:Int = 0
 
     static func == (lhs: UserData, rhs: UserData) -> Bool {
         return lhs.userID == rhs.userID

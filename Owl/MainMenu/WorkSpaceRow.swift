@@ -34,7 +34,7 @@ struct WorkSpaceRow: View {
         .padding()
         .background(UserPreference.backgroundColor)
         .cornerRadius(4)
-        .shadow(color: UserPreference.textColor.opacity(colorScheme == .light ? 0.6 : 0), radius: 2, x: 2, y: 2)
+        .shadow(color: UserPreference.textColor.opacity(colorScheme == .light ? 0.4 : 0), radius: 2, x: 2, y: 2)
     }
 }
 

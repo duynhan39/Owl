@@ -22,10 +22,16 @@ class WorkSpace: ObservableObject, Codable {
         case id, title, description, appIDCounter, apps
     }
     
+    init(title: String, description: String) {
+        self.title = title
+        self.description = description
+        self.id = getNewWorkSpaceID()
+    }
+    
     init() {
-        id = 0
         title = ""
         description = ""
+        id = getNewWorkSpaceID()
 //        appIDCounter = 0
     }
     
@@ -57,27 +63,32 @@ extension WorkSpace {
         self.apps = apps
     }
     
-    func getNewAppID() -> Int {
+    private func getNewAppID() -> Int {
         userData.appIDCounter += 1
         return userData.appIDCounter
     }
     
+    private func getNewWorkSpaceID() -> Int {
+        userData.workSpaceIDCounter += 1
+        return userData.workSpaceIDCounter
+    }
+    
     func addApp(app: App) {
         apps += [app]
-        save(option: DataFile.workSpace)
+        DataManager.save(option: DataFile.workSpace)
     }
     
     func addApp(with appInfo: AppInfo)  {
         let newApp = App(appName: appInfo.name, id: self.getNewAppID())
         apps += [newApp]
-        save(option: DataFile.workSpace)
+        DataManager.save(option: DataFile.workSpace)
     }
     
     func removeApp(app: App) {
         apps.removeAll {
             $0 == app
         }
-        save(option: DataFile.workSpace)
+        DataManager.save(option: DataFile.workSpace)
     }
 }
 

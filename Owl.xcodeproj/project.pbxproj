@@ -13,8 +13,8 @@
 		54214032243A5E7B0083BE82 /* bitbucket.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402D243A5E7B0083BE82 /* bitbucket.png */; };
 		54214033243A5E7B0083BE82 /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402E243A5E7B0083BE82 /* github.png */; };
 		54214034243A5E7B0083BE82 /* trello.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402F243A5E7B0083BE82 /* trello.png */; };
-		54214036243AA79E0083BE82 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54214035243AA79E0083BE82 /* UserInfo.swift */; };
 		54214038243AB5E40083BE82 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54214037243AB5E40083BE82 /* CustomButtonStyle.swift */; };
+		5421403A243AC6430083BE82 /* AddWorkSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54214039243AC6430083BE82 /* AddWorkSpaceView.swift */; };
 		54746BC0242BF51B00F18694 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54746BBF242BF51B00F18694 /* Test.swift */; };
 		54ABBB00241D7A0800B4777A /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ABBAFF241D7A0800B4777A /* GridView.swift */; };
 		54BAEAE724019A1E001BDA65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAE624019A1E001BDA65 /* AppDelegate.swift */; };
@@ -70,8 +70,8 @@
 		5421402D243A5E7B0083BE82 /* bitbucket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitbucket.png; sourceTree = "<group>"; };
 		5421402E243A5E7B0083BE82 /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
 		5421402F243A5E7B0083BE82 /* trello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trello.png; sourceTree = "<group>"; };
-		54214035243AA79E0083BE82 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		54214037243AB5E40083BE82 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		54214039243AC6430083BE82 /* AddWorkSpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkSpaceView.swift; sourceTree = "<group>"; };
 		54746BBF242BF51B00F18694 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		54ABBAFF241D7A0800B4777A /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		54BAEAE324019A1E001BDA65 /* Owl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Owl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +195,6 @@
 				54BAEB1924022682001BDA65 /* AppInfo.swift */,
 				54C6CE7C24328F3100E9D2F0 /* App.swift */,
 				54BAEB042401C23B001BDA65 /* WorkSpace.swift */,
-				54214035243AA79E0083BE82 /* UserInfo.swift */,
 				54BAEB062401C9C1001BDA65 /* Data.swift */,
 				54BAEB0A2401D289001BDA65 /* UserData.swift */,
 			);
@@ -276,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */,
+				54214039243AC6430083BE82 /* AddWorkSpaceView.swift */,
 				54BAEB102401E56E001BDA65 /* WorkSpaceListing.swift */,
 				54DDF9FE2410248D00E77874 /* MainMenu.swift */,
 			);
@@ -408,6 +408,7 @@
 				54DDFA012410249700E77874 /* WorkSpaceView.swift in Sources */,
 				54C3DB0E241DB0AD00D9B7FD /* View+GridStyle.swift in Sources */,
 				54C3DB0F241DB0AD00D9B7FD /* GridStyleKey.swift in Sources */,
+				5421403A243AC6430083BE82 /* AddWorkSpaceView.swift in Sources */,
 				54C3DB14241DB0AD00D9B7FD /* StaggeredGridStyle.swift in Sources */,
 				54C3DB11241DB0AD00D9B7FD /* GridPreferencesModifier.swift in Sources */,
 				54DDF9FF2410248D00E77874 /* MainMenu.swift in Sources */,
@@ -434,7 +435,6 @@
 				54ABBB00241D7A0800B4777A /* GridView.swift in Sources */,
 				54C3DB16241DB0AD00D9B7FD /* GridItem.swift in Sources */,
 				54BAEB1C24022D5C001BDA65 /* AppIcon.swift in Sources */,
-				54214036243AA79E0083BE82 /* UserInfo.swift in Sources */,
 				54BAEB1A24022682001BDA65 /* AppInfo.swift in Sources */,
 				54BAEAE924019A1E001BDA65 /* ContentView.swift in Sources */,
 				54C3DAF6241DB00100D9B7FD /* ModularGridView.swift in Sources */,

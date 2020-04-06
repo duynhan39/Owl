@@ -15,11 +15,18 @@ struct MainMenu: View {
     @State var workSpaceStack = [WorkSpace]()
     @State var workSpaceViewTabs = [WorkSpace: WorkSpaceView]()
     
+    @State var showAddWorkSpace: Bool = false
+    
     @Environment(\.colorScheme) var colorScheme
     
     
     func addWorkSpace() {
         print("Add new workSpace")
+        
+        withAnimation() {
+            showAddWorkSpace = true
+        }
+        
     }
     
     
@@ -29,7 +36,7 @@ struct MainMenu: View {
             VStack(alignment: .leading, spacing: 6) {
                 VStack(alignment: .leading) {
                     Text("Hi \(userData.firstName)")
-                        .font(.custom("Times New Roman", size: 60))
+                        .font(.custom("Times New Roman", size: 50))
                     
                     Text("What do you want to work on today?")
                         .font(.custom("Times New Roman", size: 20))
@@ -52,8 +59,7 @@ struct MainMenu: View {
                                 Capsule(style: .circular)
                                     .stroke(UserPreference.primaryColor, lineWidth: colorScheme == .dark ? 1 : 0)
                             )
-                                .shadow(color: UserPreference.textColor.opacity(colorScheme == .light ? 1 : 0), radius: 2, x: 1, y: 1)
-                            
+                                .shadow(color: UserPreference.textColor.opacity(colorScheme == .light ? 0.4 : 0), radius: 2, x: 1, y: 1)
                             
                             Spacer()
                         }
@@ -61,14 +67,14 @@ struct MainMenu: View {
                 }
             }
             
-            
-            
-            
             GeometryReader { geometry in
-                ZStack() {
-                    WorkSpaceView(workSpace: self.$selectedSpace, selectedApp: nil)
-                }.offset(x: 0, y: self.selectedSpace != nil ? 0 : geometry.size.height)
+                WorkSpaceView(workSpace: self.$selectedSpace, selectedApp: nil)
+                    .offset(x: 0, y: self.selectedSpace != nil ? 0 : geometry.size.height)
             }
+        }
+        .sheet(isPresented: self.$showAddWorkSpace) {
+//        .sheet(isPresented: self.$showAddWorkSpace) {
+            AddWorkSpaceView()
         }
     }
 }
