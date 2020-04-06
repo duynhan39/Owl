@@ -10,17 +10,18 @@ import Foundation
 import SwiftUI
 import ImageIO
 
-class JSONWorkSpace : Hashable, Codable, Identifiable  {
-    var content:[WorkSpace]?
-
-    static func == (lhs: JSONWorkSpace, rhs: JSONWorkSpace) -> Bool {
-        return lhs.content == rhs.content
-    }
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(content)
-    }
-}
+//class JSONWorkSpace : Hashable, Codable, Identifiable  {
+//    var content:[WorkSpace]?
+//    var appIDCounter:Int = 0
+//
+//    static func == (lhs: JSONWorkSpace, rhs: JSONWorkSpace) -> Bool {
+//        return lhs.content == rhs.content
+//    }
+//
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(content)
+//    }
+//}
 
 //class JSONApp : Hashable, Codable, Identifiable  {
 //    var content:[AppInfo]?
@@ -35,12 +36,12 @@ class JSONWorkSpace : Hashable, Codable, Identifiable  {
 //}
 
 struct DataFile {
-    static let workSpace = "workSpaceData.json"
+    static let workSpace = "userData.json"
     static let appData = "appData.json"
 }
 
-let workSpacesData : JSONWorkSpace = load(DataFile.workSpace) ?? JSONWorkSpace()
-let workSpacesInfo: [WorkSpace] = workSpacesData.content ?? []
+let userData : UserData = load(DataFile.workSpace) ?? UserData()
+let workSpacesInfo: [WorkSpace] = userData.workSpaces ?? []
 
 let appsInfo: [String:AppInfo] = load(DataFile.appData) ?? [String:AppInfo]()//appsData.content ?? []
 
@@ -84,7 +85,7 @@ func loadJSON<T: Decodable>(_ url: URL) -> T {
 
     do {
         data = try Data(contentsOf: url)
-        print(data)
+//        print(data)
     } catch {
         fatalError("[\(#file)]: Couldn't load \(url.path) from main bundle:\n\(error)")
     }
@@ -102,7 +103,7 @@ func save(option: String) {
     case DataFile.appData:
         save(from: appsInfo, to: option)
     case DataFile.workSpace:
-        save(from: workSpacesData, to: option)
+        save(from: userData, to: option)
     default:
         return
     }
@@ -120,8 +121,8 @@ func save<T: Encodable>(from data: T, to filename: String) {
         encoder.outputFormatting = .prettyPrinted
         
         let jsonData = try encoder.encode(data)
-        let jsonString = String(data: jsonData, encoding: .utf8)
-        print(jsonString!)
+//        let jsonString = String(data: jsonData, encoding: .utf8)
+//        print(jsonString!)
         try jsonData.write(to: url)
         
     } catch {

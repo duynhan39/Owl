@@ -13,7 +13,7 @@ class WorkSpace: ObservableObject, Codable {
     var id: Int = 0
     var title: String = ""
     var description: String = ""
-    var appIDCounter: Int = 0
+//    var appIDCounter: Int = 0
     
     @Published var apps: [App] = []
     
@@ -26,7 +26,7 @@ class WorkSpace: ObservableObject, Codable {
         id = 0
         title = ""
         description = ""
-        appIDCounter = 0
+//        appIDCounter = 0
     }
     
     required init(from decoder: Decoder) throws {
@@ -34,7 +34,7 @@ class WorkSpace: ObservableObject, Codable {
         self.id = try container.decode(Int.self, forKey: .id)
         self.title = try container.decode(String.self, forKey: .title)
         self.description = try container.decode(String.self, forKey: .description)
-        self.appIDCounter = try container.decode(Int.self, forKey: .appIDCounter)
+//        self.appIDCounter = try container.decode(Int.self, forKey: .appIDCounter)
         self.apps = try container.decode(Array<App>.self, forKey: .apps)
     }
     
@@ -43,7 +43,7 @@ class WorkSpace: ObservableObject, Codable {
         try container.encode(id, forKey: .id)
         try container.encode(title, forKey: .title)
         try container.encode(description, forKey: .description)
-        try container.encode(appIDCounter, forKey: .appIDCounter)
+//        try container.encode(appIDCounter, forKey: .appIDCounter)
         try container.encode(apps, forKey: .apps)
     }
 }
@@ -53,28 +53,31 @@ extension WorkSpace {
         self.id = id
         self.title = title
         self.description = description
-        self.appIDCounter = appIDCounter
+//        self.appIDCounter = appIDCounter
         self.apps = apps
     }
     
     func getNewAppID() -> Int {
-        appIDCounter += 1
-        return appIDCounter
+        userData.appIDCounter += 1
+        return userData.appIDCounter
     }
     
     func addApp(app: App) {
         apps += [app]
+        save(option: DataFile.workSpace)
     }
     
     func addApp(with appInfo: AppInfo)  {
         let newApp = App(appName: appInfo.name, id: self.getNewAppID())
         apps += [newApp]
+        save(option: DataFile.workSpace)
     }
     
     func removeApp(app: App) {
         apps.removeAll {
             $0 == app
         }
+        save(option: DataFile.workSpace)
     }
 }
 

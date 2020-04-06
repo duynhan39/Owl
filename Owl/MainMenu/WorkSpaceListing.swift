@@ -39,6 +39,6 @@ struct WorkSpaceListing: View {
 struct SpaceListView_Previews: PreviewProvider {
     static var previews: some View {
         WorkSpaceListing(allSpaces: .constant(workSpacesInfo), presentedSpace: .constant(nil))
-            .environmentObject(UserData())
+//            .environmentObject(UserData())
     }
 }

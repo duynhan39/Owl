@@ -29,7 +29,6 @@ struct AppPickerView: View {
     
     func selectApp(appInfo : AppInfo) {
         workSpace?.addApp(with: appInfo)
-        save(option: DataFile.workSpace)
         dismiss()
     }
     

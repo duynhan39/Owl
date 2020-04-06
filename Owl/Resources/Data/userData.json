@@ -1,11 +1,13 @@
 {
-    "content":
+    "firstName": "Nhan",
+    "lastName": "Cao",
+    "userID": 0,
+    "workSpaces":
     [
         {
             "id": 1,
             "title": "Work",
             "description": "Work stuff",
-            "appIDCounter":2,
             "apps" : [
                 {
                     "name": "gmail",
@@ -23,22 +25,22 @@
             "id": 2,
             "title": "Personal",
             "description": "My stuff",
-            "appIDCounter": 3,
             "apps" :[
                 {
                     "name": "messenger",
-                    "id": 1
+                    "id": 3
                 },
                 {
                     "name": "instagram",
-                    "id": 2
+                    "id": 4
                 },
                 {
                     "name": "whatsapp",
-                    "id": 3
+                    "id": 5
                 }
             ]
         }
         
-    ]
+    ],
+    "appIDCounter": 5
 }

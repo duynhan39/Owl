@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		541F10052403940600E1088D /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541F10042403940600E1088D /* BrowserView.swift */; };
+		54214030243A5E7B0083BE82 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402B243A5E7B0083BE82 /* youtube.png */; };
+		54214031243A5E7B0083BE82 /* tumblr.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402C243A5E7B0083BE82 /* tumblr.png */; };
+		54214032243A5E7B0083BE82 /* bitbucket.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402D243A5E7B0083BE82 /* bitbucket.png */; };
+		54214033243A5E7B0083BE82 /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402E243A5E7B0083BE82 /* github.png */; };
+		54214034243A5E7B0083BE82 /* trello.png in Resources */ = {isa = PBXBuildFile; fileRef = 5421402F243A5E7B0083BE82 /* trello.png */; };
+		54214036243AA79E0083BE82 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54214035243AA79E0083BE82 /* UserInfo.swift */; };
 		54746BC0242BF51B00F18694 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54746BBF242BF51B00F18694 /* Test.swift */; };
 		54ABBB00241D7A0800B4777A /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ABBAFF241D7A0800B4777A /* GridView.swift */; };
 		54BAEAE724019A1E001BDA65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEAE624019A1E001BDA65 /* AppDelegate.swift */; };
@@ -48,7 +54,7 @@
 		54C6CE7724315C8A00E9D2F0 /* gmail.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C6CE6E24315C8A00E9D2F0 /* gmail.png */; };
 		54C6CE7824315C8A00E9D2F0 /* messenger.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C6CE6F24315C8A00E9D2F0 /* messenger.png */; };
 		54C6CE7924315C8A00E9D2F0 /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C6CE7024315C8A00E9D2F0 /* whatsapp.png */; };
-		54C6CE7A24315C8A00E9D2F0 /* workSpaceData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54C6CE7224315C8A00E9D2F0 /* workSpaceData.json */; };
+		54C6CE7A24315C8A00E9D2F0 /* userData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54C6CE7224315C8A00E9D2F0 /* userData.json */; };
 		54C6CE7B24315C8A00E9D2F0 /* appData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54C6CE7324315C8A00E9D2F0 /* appData.json */; };
 		54C6CE7D24328F3100E9D2F0 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6CE7C24328F3100E9D2F0 /* App.swift */; };
 		54DDF9FF2410248D00E77874 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DDF9FE2410248D00E77874 /* MainMenu.swift */; };
@@ -58,6 +64,12 @@
 
 /* Begin PBXFileReference section */
 		541F10042403940600E1088D /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
+		5421402B243A5E7B0083BE82 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
+		5421402C243A5E7B0083BE82 /* tumblr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tumblr.png; sourceTree = "<group>"; };
+		5421402D243A5E7B0083BE82 /* bitbucket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitbucket.png; sourceTree = "<group>"; };
+		5421402E243A5E7B0083BE82 /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
+		5421402F243A5E7B0083BE82 /* trello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trello.png; sourceTree = "<group>"; };
+		54214035243AA79E0083BE82 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		54746BBF242BF51B00F18694 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		54ABBAFF241D7A0800B4777A /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		54BAEAE324019A1E001BDA65 /* Owl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Owl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +113,7 @@
 		54C6CE6E24315C8A00E9D2F0 /* gmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gmail.png; sourceTree = "<group>"; };
 		54C6CE6F24315C8A00E9D2F0 /* messenger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messenger.png; sourceTree = "<group>"; };
 		54C6CE7024315C8A00E9D2F0 /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp.png; sourceTree = "<group>"; };
-		54C6CE7224315C8A00E9D2F0 /* workSpaceData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = workSpaceData.json; sourceTree = "<group>"; };
+		54C6CE7224315C8A00E9D2F0 /* userData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userData.json; sourceTree = "<group>"; };
 		54C6CE7324315C8A00E9D2F0 /* appData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appData.json; sourceTree = "<group>"; };
 		54C6CE7C24328F3100E9D2F0 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		54DDF9FE2410248D00E77874 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -180,6 +192,7 @@
 				54BAEB1924022682001BDA65 /* AppInfo.swift */,
 				54C6CE7C24328F3100E9D2F0 /* App.swift */,
 				54BAEB042401C23B001BDA65 /* WorkSpace.swift */,
+				54214035243AA79E0083BE82 /* UserInfo.swift */,
 				54BAEB062401C9C1001BDA65 /* Data.swift */,
 				54BAEB0A2401D289001BDA65 /* UserData.swift */,
 			);
@@ -278,12 +291,17 @@
 		54C6CE6A24315C8A00E9D2F0 /* AppIcons */ = {
 			isa = PBXGroup;
 			children = (
-				54C6CE6B24315C8A00E9D2F0 /* instagram.png */,
 				54C6CE6C24315C8A00E9D2F0 /* blank.png */,
+				54C6CE6B24315C8A00E9D2F0 /* instagram.png */,
 				54C6CE6D24315C8A00E9D2F0 /* outlook.png */,
 				54C6CE6E24315C8A00E9D2F0 /* gmail.png */,
 				54C6CE6F24315C8A00E9D2F0 /* messenger.png */,
 				54C6CE7024315C8A00E9D2F0 /* whatsapp.png */,
+				5421402D243A5E7B0083BE82 /* bitbucket.png */,
+				5421402E243A5E7B0083BE82 /* github.png */,
+				5421402F243A5E7B0083BE82 /* trello.png */,
+				5421402C243A5E7B0083BE82 /* tumblr.png */,
+				5421402B243A5E7B0083BE82 /* youtube.png */,
 			);
 			path = AppIcons;
 			sourceTree = "<group>";
@@ -291,7 +309,7 @@
 		54C6CE7124315C8A00E9D2F0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				54C6CE7224315C8A00E9D2F0 /* workSpaceData.json */,
+				54C6CE7224315C8A00E9D2F0 /* userData.json */,
 				54C6CE7324315C8A00E9D2F0 /* appData.json */,
 			);
 			path = Data;
@@ -358,14 +376,19 @@
 				54C6CE7924315C8A00E9D2F0 /* whatsapp.png in Resources */,
 				54BAEAF424019A20001BDA65 /* Main.storyboard in Resources */,
 				54C6CE7824315C8A00E9D2F0 /* messenger.png in Resources */,
+				54214030243A5E7B0083BE82 /* youtube.png in Resources */,
 				54C6CE7B24315C8A00E9D2F0 /* appData.json in Resources */,
-				54C6CE7A24315C8A00E9D2F0 /* workSpaceData.json in Resources */,
+				54214031243A5E7B0083BE82 /* tumblr.png in Resources */,
+				54214033243A5E7B0083BE82 /* github.png in Resources */,
+				54C6CE7A24315C8A00E9D2F0 /* userData.json in Resources */,
 				54BAEAF124019A20001BDA65 /* Preview Assets.xcassets in Resources */,
 				54C6CE7424315C8A00E9D2F0 /* instagram.png in Resources */,
 				54C6CE7624315C8A00E9D2F0 /* outlook.png in Resources */,
 				54BAEAEE24019A20001BDA65 /* Assets.xcassets in Resources */,
 				54C6CE7724315C8A00E9D2F0 /* gmail.png in Resources */,
 				54C6CE7524315C8A00E9D2F0 /* blank.png in Resources */,
+				54214032243A5E7B0083BE82 /* bitbucket.png in Resources */,
+				54214034243A5E7B0083BE82 /* trello.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +430,7 @@
 				54ABBB00241D7A0800B4777A /* GridView.swift in Sources */,
 				54C3DB16241DB0AD00D9B7FD /* GridItem.swift in Sources */,
 				54BAEB1C24022D5C001BDA65 /* AppIcon.swift in Sources */,
+				54214036243AA79E0083BE82 /* UserInfo.swift in Sources */,
 				54BAEB1A24022682001BDA65 /* AppInfo.swift in Sources */,
 				54BAEAE924019A1E001BDA65 /* ContentView.swift in Sources */,
 				54C3DAF6241DB00100D9B7FD /* ModularGridView.swift in Sources */,

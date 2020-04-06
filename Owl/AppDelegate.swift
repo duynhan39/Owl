@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //            .environment(\.managedObjectContext, persistentContainer.viewContext)
         
             MainMenu()
-            .environmentObject(UserData())
+//            .environmentObject(UserData())
             
 //            AllAppListingView()
             

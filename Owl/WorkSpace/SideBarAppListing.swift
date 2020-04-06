@@ -33,6 +33,12 @@ struct SideBarAppListing: View {
                 .buttonStyle(AppButtonStyle())
                 .contextMenu {
                     Button(action: {
+                        self.delegate?.close(app: app)
+//                        self.workSpace.removeApp(app: app)
+                    }) {
+                        Text("Close")
+                    }
+                    Button(action: {
                         self.delegate?.remove(app: app)
                         self.workSpace.removeApp(app: app)
                     }) {

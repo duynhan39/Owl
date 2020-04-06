@@ -11,9 +11,10 @@ import SwiftUI
 
 struct WorkSpaceView: View {
     @Binding var workSpace: WorkSpace?
+    
     @State var selectedApp : App?
-    @State var browserTabs = [App:BrowserView]()
     @State var appStack = [App]()
+    @State var browserTabs = [App:BrowserView]()
     
     @State var showAppPicker: Bool = false
 
@@ -73,6 +74,7 @@ struct WorkSpaceNavigationDetail_Previews: PreviewProvider {
 protocol ModifyableAppStack {
     func select(app: App)
     func remove(app: App)
+    func close(app: App)
 }
 
 
@@ -91,6 +93,14 @@ extension WorkSpaceView: ModifyableAppStack {
         if (selectedApp != nil) {
             browserTabs.removeValue(forKey: app)
             appStack.removeAll { $0 == app }
+        }
+        
+    }
+    
+    func close(app: App) {
+        browserTabs.removeValue(forKey: app)
+        if selectedApp == app {
+            selectedApp = nil
         }
     }
 }

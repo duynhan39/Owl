@@ -10,27 +10,42 @@ import SwiftUI
 
 struct MainMenu: View {
     @State var allSpaces = workSpacesInfo
-    @State var presentedSpace : WorkSpace? //= workSpaceData[0]
+    
+    @State var selectedSpace : WorkSpace?
+    @State var workSpaceStack = [WorkSpace]()
+    @State var workSpaceViewTabs = [WorkSpace: WorkSpaceView]()
+    
+    
+//    func addWorkSpace() {
+//        
+//    }
+    
+    
     var body: some View {
         
         ZStack {
-             VStack(alignment: .leading, spacing: 6) {
+            VStack(alignment: .leading, spacing: 6) {
                 VStack(alignment: .leading) {
-                Text("Hi Nhan")
-                    .font(.custom("Times New Roman", size: 60))
-                
-                Text("What do you want to work on today?")
-                    .font(.custom("Times New Roman", size: 20))
+                    Text("Hi \(userData.firstName)")
+                        .font(.custom("Times New Roman", size: 60))
+                    
+                    Text("What do you want to work on today?")
+                        .font(.custom("Times New Roman", size: 20))
                 }.padding()
                 
-                WorkSpaceListing(allSpaces: $allSpaces, presentedSpace: $presentedSpace)
-//                    .background(Color(NSColor.windowBackgroundColor))
+                WorkSpaceListing(allSpaces: $allSpaces, presentedSpace: $selectedSpace)
+                //                    .background(Color(NSColor.windowBackgroundColor))
+                
+//                Button(action: addWorkSpace) {
+//                    Image(nsImage: NSImage(named: NSImage.addTemplateName)!)
+//                }
             }
+            
             
             GeometryReader { geometry in
                 ZStack() {
-                    WorkSpaceView(workSpace: self.$presentedSpace, selectedApp: nil)
-                }.offset(x: 0, y: self.presentedSpace != nil ? 0 : geometry.size.height)
+                    WorkSpaceView(workSpace: self.$selectedSpace, selectedApp: nil)
+                }.offset(x: 0, y: self.selectedSpace != nil ? 0 : geometry.size.height)
             }
         }
     }
@@ -39,6 +54,6 @@ struct MainMenu: View {
 struct WorkSpaceMenu_Previews: PreviewProvider {
     static var previews: some View {
         MainMenu()
-            .environmentObject(UserData())
+        //            .environmentObject(UserData())
     }
 }
