@@ -34,7 +34,7 @@ struct SideBarAppListing: View {
                     }
                     Button(action: {
                         self.delegate?.remove(app: app)
-                        self.workSpace.removeApp(app: app)
+                        self.workSpace.remove(app: app)
                     }) {
                         Text("Remove")
                     }

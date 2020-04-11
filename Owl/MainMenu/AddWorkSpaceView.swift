@@ -11,6 +11,7 @@ import SwiftUI
 struct AddWorkSpaceView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    var workSpaces:[WorkSpace]
     
     func dismiss() {
         self.presentationMode.wrappedValue.dismiss()
@@ -22,15 +23,12 @@ struct AddWorkSpaceView: View {
     }
     
     func save() {
-        print("Saved")
+//        print("Saved")
         
-//        let newWorkSpace =
-//        newWorkSpace.title = title
-//        newWorkSpace.description = description
-        
-//        userData.workSpaces?.append(WorkSpace(title: title, description: description))
-//        DataManager.save(option: DataFile.workSpace)
-//        dismiss()
+        let newWorkSpace = WorkSpace(title: title, description: description)
+        _userData.add(workSpace: newWorkSpace)
+        DataManager.save(option: DataFile.workSpace)
+        dismiss()
     }
     
     @State var title:String = ""
@@ -68,6 +66,7 @@ struct AddWorkSpaceView: View {
 
 struct AddWorkSpaceView_Previews: PreviewProvider {
     static var previews: some View {
-        AddWorkSpaceView()
+        AddWorkSpaceView(workSpaces: workSpacesInfo)
+            //.constant(workSpacesInfo))
     }
 }

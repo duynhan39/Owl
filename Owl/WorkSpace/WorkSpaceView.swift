@@ -60,9 +60,9 @@ struct WorkSpaceView: View {
                 }
             }
         }
-        .sheet(isPresented: self.$showAppPicker) {
-            Text("HIIIIII")
-//            AppPickerView(workSpace: self.$workSpace)
+        .popover(isPresented: self.$showAppPicker) {
+//            Text("HIIIIII")
+            AppPickerView(workSpace: self.$workSpace)
         }
     }
 }

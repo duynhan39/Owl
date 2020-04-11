@@ -64,27 +64,27 @@ extension WorkSpace {
     }
     
     private func getNewAppID() -> Int {
-        userData.appIDCounter += 1
-        return userData.appIDCounter
+        _userData.appIDCounter += 1
+        return _userData.appIDCounter
     }
     
     private func getNewWorkSpaceID() -> Int {
-        userData.workSpaceIDCounter += 1
-        return userData.workSpaceIDCounter
+        _userData.workSpaceIDCounter += 1
+        return _userData.workSpaceIDCounter
     }
     
-    func addApp(app: App) {
+    func add(app: App) {
         apps += [app]
         DataManager.save(option: DataFile.workSpace)
     }
     
-    func addApp(with appInfo: AppInfo)  {
+    func add(with appInfo: AppInfo)  {
         let newApp = App(appName: appInfo.name, id: self.getNewAppID())
         apps += [newApp]
         DataManager.save(option: DataFile.workSpace)
     }
     
-    func removeApp(app: App) {
+    func remove(app: App) {
         apps.removeAll {
             $0 == app
         }

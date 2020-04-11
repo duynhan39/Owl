@@ -275,8 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */,
-				54214039243AC6430083BE82 /* AddWorkSpaceView.swift */,
 				54BAEB102401E56E001BDA65 /* WorkSpaceListing.swift */,
+				54214039243AC6430083BE82 /* AddWorkSpaceView.swift */,
 				54DDF9FE2410248D00E77874 /* MainMenu.swift */,
 			);
 			path = MainMenu;

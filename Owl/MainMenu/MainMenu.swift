@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MainMenu: View {
+    @ObservedObject var data = _userData
     @State var allSpaces = workSpacesInfo
     
     @State var selectedSpace : WorkSpace?
@@ -35,7 +36,7 @@ struct MainMenu: View {
         ZStack {
             VStack(alignment: .leading, spacing: 6) {
                 VStack(alignment: .leading) {
-                    Text("Hi \(userData.firstName)")
+                    Text("Hi \(data.firstName)")
                         .font(.custom("Times New Roman", size: 50))
                     
                     Text("What do you want to work on today?")
@@ -43,7 +44,7 @@ struct MainMenu: View {
                 }.padding()
                 
                 ZStack {
-                    WorkSpaceListing(allSpaces: $allSpaces, presentedSpace: $selectedSpace)
+                    WorkSpaceListing(allSpaces: self.$data.workSpaces, presentedSpace: $selectedSpace)
                     
                     VStack {
                         Spacer()
@@ -73,8 +74,7 @@ struct MainMenu: View {
             }
         }
         .sheet(isPresented: self.$showAddWorkSpace) {
-//        .sheet(isPresented: self.$showAddWorkSpace) {
-            AddWorkSpaceView()
+            AddWorkSpaceView(workSpaces: self.data.workSpaces)
         }
     }
 }

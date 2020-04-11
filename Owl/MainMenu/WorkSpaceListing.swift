@@ -16,13 +16,13 @@ struct WorkSpaceListing: View {
     
     var body: some View {
         ScrollView {
-            ForEach(allSpaces.indices) { index in
+            ForEach(allSpaces) { space in
                 Button(action: {
                     withAnimation() {
-                        self.presentedSpace = self.allSpaces[index]
+                        self.presentedSpace = space//self.allSpaces[index]
                     }
                 }) {
-                    WorkSpaceRow(space: self.allSpaces[index])
+                    WorkSpaceRow(space: space) //self.allSpaces[index])
                 }
                 .buttonStyle(AppButtonStyle())
             }

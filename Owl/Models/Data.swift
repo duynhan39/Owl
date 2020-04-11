@@ -10,31 +10,6 @@ import Foundation
 import SwiftUI
 import ImageIO
 
-//class JSONWorkSpace : Hashable, Codable, Identifiable  {
-//    var content:[WorkSpace]?
-//    var appIDCounter:Int = 0
-//
-//    static func == (lhs: JSONWorkSpace, rhs: JSONWorkSpace) -> Bool {
-//        return lhs.content == rhs.content
-//    }
-//
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(content)
-//    }
-//}
-
-//class JSONApp : Hashable, Codable, Identifiable  {
-//    var content:[AppInfo]?
-//
-//    static func == (lhs: JSONApp, rhs: JSONApp) -> Bool {
-//        return lhs.content == rhs.content
-//    }
-//
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(content)
-//    }
-//}
-
 struct UserPreference {
     static var backgroundColor = Color(NSColor.windowBackgroundColor)
     static var textColor = Color(NSColor.textColor)
@@ -54,10 +29,11 @@ struct DataFile {
     static let appData = "appData.json"
 }
 
-let userData : UserData = DataManager.load(DataFile.workSpace) ?? UserData()
-let workSpacesInfo: [WorkSpace] = userData.workSpaces ?? []
+//@ObservedObject
+var _userData : UserData = DataManager.load(DataFile.workSpace) ?? UserData()
+var workSpacesInfo: [WorkSpace] = _userData.workSpaces ?? []
 
-let appsInfo: [String:AppInfo] = DataManager.load(DataFile.appData) ?? [String:AppInfo]()//appsData.content ?? []
+var appsInfo: [String:AppInfo] = DataManager.load(DataFile.appData) ?? [String:AppInfo]()//appsData.content ?? []
 
 let appsInfoArray : [AppInfo] = Array(appsInfo.values).sorted { (lhs, rhs) -> Bool in
     return lhs.id < rhs.id
@@ -118,13 +94,14 @@ struct DataManager {
         case DataFile.appData:
             save(from: appsInfo, to: option)
         case DataFile.workSpace:
-            save(from: userData, to: option)
+            save(from: _userData, to: option)
         default:
             return
         }
     }
     
     static func save<T: Encodable>(from data: T, to filename: String) {
+        print("Save")
         guard let file = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             else {
                 fatalError("[\(#file)]: Couldn't find \(filename) in main bundle to load data")

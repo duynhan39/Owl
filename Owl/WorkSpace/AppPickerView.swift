@@ -28,7 +28,7 @@ struct AppPickerView: View {
     }
     
     func selectApp(appInfo : AppInfo) {
-        workSpace?.addApp(with: appInfo)
+        workSpace?.add(with: appInfo)
         dismiss()
     }
     
@@ -56,12 +56,12 @@ struct AppPickerView: View {
             )
             
             
-            HStack {
-                Button("Cancel", action: cancel)
-                Spacer()
-//                Button("Add", action: add) {}
-                
-            }.padding()
+//            HStack {
+//                Button("Cancel", action: cancel)
+//                Spacer()
+////                Button("Add", action: add) {}
+//
+//            }.padding()
             
         }.frame(width: 600, height: 450)
             .background(UserPreference.backgroundColor)
