@@ -13,6 +13,12 @@ struct WorkSpaceRow: View {
     
     @Environment(\.colorScheme) var colorScheme
     
+    @State var showEditWorkSpace: Bool = false
+    
+    func edit() {
+        showEditWorkSpace = true
+    }
+    
     var body: some View {
         HStack(alignment: .center) {
             VStack(alignment: .leading) {
@@ -30,11 +36,19 @@ struct WorkSpaceRow: View {
                     .foregroundColor(UserPreference.textColor)
             }
             Spacer()
+            
+            Button(action: edit) {
+                Image(nsImage: NSImage(named: NSImage.touchBarGetInfoTemplateName)!)
+            }
+            .buttonStyle(AppButtonStyle())
         }
         .padding()
         .background(UserPreference.backgroundColor)
         .cornerRadius(4)
         .shadow(color: UserPreference.textColor.opacity(colorScheme == .light ? 0.4 : 0), radius: 2, x: 2, y: 2)
+        .popover(isPresented: self.$showEditWorkSpace) {
+            EditWorkSpaceInfo(workSpace: self.space)
+        }
     }
 }
 

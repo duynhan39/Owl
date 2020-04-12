@@ -31,7 +31,7 @@ struct DataFile {
 
 //@ObservedObject
 var _userData : UserData = DataManager.load(DataFile.workSpace) ?? UserData()
-var workSpacesInfo: [WorkSpace] = _userData.workSpaces ?? []
+var workSpacesInfo: [WorkSpace] = _userData.workSpaces
 
 var appsInfo: [String:AppInfo] = DataManager.load(DataFile.appData) ?? [String:AppInfo]()//appsData.content ?? []
 

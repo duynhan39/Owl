@@ -72,4 +72,8 @@ extension UserData {
     func add(workSpace:WorkSpace) {
         self.workSpaces += [workSpace]
     }
+    
+    func remove(workSpace:WorkSpace) {
+        self.workSpaces.removeAll{$0 == workSpace}
+    }
 }

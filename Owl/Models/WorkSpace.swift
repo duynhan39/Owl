@@ -85,9 +85,7 @@ extension WorkSpace {
     }
     
     func remove(app: App) {
-        apps.removeAll {
-            $0 == app
-        }
+        apps.removeAll {$0 == app}
         DataManager.save(option: DataFile.workSpace)
     }
 }

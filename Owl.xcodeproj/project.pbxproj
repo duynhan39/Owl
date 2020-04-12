@@ -58,6 +58,7 @@
 		54C6CE7A24315C8A00E9D2F0 /* userData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54C6CE7224315C8A00E9D2F0 /* userData.json */; };
 		54C6CE7B24315C8A00E9D2F0 /* appData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54C6CE7324315C8A00E9D2F0 /* appData.json */; };
 		54C6CE7D24328F3100E9D2F0 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6CE7C24328F3100E9D2F0 /* App.swift */; };
+		54C73F252442DBDC0072DF85 /* EditWorkSpaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C73F242442DBDC0072DF85 /* EditWorkSpaceInfo.swift */; };
 		54DDF9FF2410248D00E77874 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DDF9FE2410248D00E77874 /* MainMenu.swift */; };
 		54DDFA012410249700E77874 /* WorkSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DDFA002410249700E77874 /* WorkSpaceView.swift */; };
 		54DE5CF5241C5B8300DF6605 /* AppPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DE5CF4241C5B8300DF6605 /* AppPickerView.swift */; };
@@ -118,6 +119,7 @@
 		54C6CE7224315C8A00E9D2F0 /* userData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userData.json; sourceTree = "<group>"; };
 		54C6CE7324315C8A00E9D2F0 /* appData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appData.json; sourceTree = "<group>"; };
 		54C6CE7C24328F3100E9D2F0 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		54C73F242442DBDC0072DF85 /* EditWorkSpaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkSpaceInfo.swift; sourceTree = "<group>"; };
 		54DDF9FE2410248D00E77874 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		54DDFA002410249700E77874 /* WorkSpaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkSpaceView.swift; sourceTree = "<group>"; };
 		54DE5CF4241C5B8300DF6605 /* AppPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPickerView.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				54BAEAFE2401C003001BDA65 /* WorkSpaceRow.swift */,
+				54C73F242442DBDC0072DF85 /* EditWorkSpaceInfo.swift */,
 				54BAEB102401E56E001BDA65 /* WorkSpaceListing.swift */,
 				54214039243AC6430083BE82 /* AddWorkSpaceView.swift */,
 				54DDF9FE2410248D00E77874 /* MainMenu.swift */,
@@ -431,6 +434,7 @@
 				54C3DB15241DB0AD00D9B7FD /* ModularGridStyle.swift in Sources */,
 				54214038243AB5E40083BE82 /* CustomButtonStyle.swift in Sources */,
 				54C3DB1F241DB11400D9B7FD /* Item.swift in Sources */,
+				54C73F252442DBDC0072DF85 /* EditWorkSpaceInfo.swift in Sources */,
 				54C3DB17241DB0AD00D9B7FD /* Tracks.swift in Sources */,
 				54ABBB00241D7A0800B4777A /* GridView.swift in Sources */,
 				54C3DB16241DB0AD00D9B7FD /* GridItem.swift in Sources */,
