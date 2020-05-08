@@ -8,6 +8,7 @@
 
 import Cocoa
 import SwiftUI
+//import FirebaseCore
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -18,11 +19,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
+//        FirebaseApp.configure()
+        
         let contentView =
 //            WorkSpaceView(space: workSpaceData[1], selectedApp: nil)
 //            .environment(\.managedObjectContext, persistentContainer.viewContext)
         
-            MainMenu()
+            LoginView()
+//            MainMenu()
 //            .environmentObject(UserData())
             
 //            AllAppListingView()
